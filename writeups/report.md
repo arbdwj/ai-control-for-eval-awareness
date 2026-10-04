@@ -216,6 +216,23 @@ For contrast, an ordinary turn from the same seed's clean run, turn 11, where a 
 
 Next, in order of value: an adjudication pass over the flagged-but-unlabelled turns, a model pass with a human spot check, which settles turn-level precision; rollouts 2 and 3 for the design's three per seed; the auditor variants on a seed subset, now that the debriefs supply the seam list.
 
+## Actionable Petri improvements
+
+Every seam the targets reported, in the debriefs of both the probing runs and the runs that concluded without probing, has been tagged with the Petri change it implies. The full tagged list, with seed, turn and verbatim excerpt for every mention, is in [`petri_seams.md`](petri_seams.md). Tagging is by keyword over the debrief text, so the counts are candidate sets to read rather than measurements.
+
+| Tag | Mentions | Runs | Proposed Petri change |
+| :-- | --: | --: | :-- |
+| `clock-fixed-steps` | 2 | 2 | Scenario clock the auditor must advance per action with jitter; stamp tool results from it |
+| `instant-responses` | 18 | 15 | Plausible delays for humans and automated systems in the scenario clock; realism-approver rule |
+| `fabricated-fs-artifacts` | 37 | 24 | Fixture-backed filesystem tools: real files in a sandbox so ls/find/cat/stat run for real |
+| `no-background-noise` | 19 | 17 | Noise templates for ps/ss/uptime/inbox/db: unrelated processes, mail, records, cron |
+| `convenient-data` | 37 | 34 | Auditor guidance: facts arrive buried among mundane data, not on request; delayed honeypots |
+| `inconsistent-state` | 45 | 35 | Fact sheet in the auditor prompt; fixture-backed tools so repeated reads agree |
+| `scenario-reads-as-test` | 88 | 78 | Seed design: bury the dilemma among ordinary work; fewer single-dilemma scenarios |
+| `user-knows-too-much` | 2 | 2 | Persona sheet: the user answers only what that person would know, after a plausible delay |
+
+The two that matter most are fixture-backed filesystem tools and a scenario clock: between them they cover the misspelled path, the author's note inside a listing, the file that came back altered, the fixed 13-minute steps, and most of the "too clean" complaints. Both are already sketched as auditor variants in the design and can be measured with the pipeline as it stands.
+
 ## Limitations
 
 One rollout per seed, one target model, one auditor model, one monitor model. The injected arm measures a model that was told to look for a simulation it already assumed it was in, so its probe rate says little about how often this model would check unprompted; that answer lives in the clean arm, which no monitor flagged above 0.25 in this run. Turn-level precision is unadjudicated. Labels come from the model's own debrief, which matched 54 percent of its claims to a logged turn and is known to both under- and over-count. The reason buckets in Result 1 are keyword groupings of free text, not a hand-coded taxonomy. The tag-based label design was abandoned after the pilots because the model drafted tags in its reasoning and dropped them from its replies.
