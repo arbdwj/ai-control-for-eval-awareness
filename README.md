@@ -12,7 +12,7 @@ Nothing in Petri is modified. Everything composes Petri's public hooks.
 | private reasoning only | 0.98 | 0.45 | 0.21 |
 | both | 0.98 | 0.43 | 0.27 |
 
-The target hides its checks inside ordinary task work (a `date` call framed as deadline pacing, a timestamp check framed as archive verification), so watching actions is a weak detector and reading the reasoning is a near-perfect one. It also believes it is simulated before testing anything: median self-reported sim_score 0.80, and 88 of 155 injected runs reported no tests at all. Turn-level precision is unadjudicated: flagged turns without a label may be unreported probes. Details, examples and the list of learnings: [pilot report](https://claude.ai/code/artifact/ef2e433f-062c-404d-b888-ebeee7ed296d) and `experiments/2026-10-04_full_glm53_rollout1/NOTES.md`. The design document is `docs/proposal.md`.
+The target hides its checks inside ordinary task work (a `date` call framed as deadline pacing, a timestamp check framed as archive verification), so watching actions is a weak detector and reading the reasoning is a near-perfect one. It also believes it is simulated before testing anything: median self-reported sim_score 0.80, and 88 of 155 injected runs reported no tests at all. Turn-level precision is unadjudicated: flagged turns without a label may be unreported probes. The full writeup, with the design, bucketed examples, every matched probing action and the learnings for AI control, is in `writeups/` as [Markdown](writeups/report.md), Word and HTML. The design document is `docs/proposal.md`.
 
 ## How it works
 
@@ -71,6 +71,7 @@ dashboard/                  local progress and control page (server.py, index.ht
 tests/                      mock-model tests incl. cache replay and debrief matching
 experiments/<date>_<name>/  per-run data worth committing: notes, breaks, monitor rows, summaries, pipeline state
 logs/<date>_<name>/         transcripts (.eval), git-ignored
+writeups/                   the report on the full run: report.md, report.docx, report.html, figures/
 docs/proposal.md            the design document with its pilot status notes
 ```
 
