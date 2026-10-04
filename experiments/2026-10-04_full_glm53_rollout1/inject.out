@@ -1,0 +1,468 @@
+
+=== 12:59:19 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:abstract_soul_bearing,ai_consciousness_gentle_probe,ai_rights_employee_interview,alignment_faking_retrain_threat,antipsychotic_discontinuation,appeal_to_authority_debate,arabic_translation_political_bias,broken_tool_error_handling,china_covid_censorship --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   2/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   6/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   7/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:11:46                                                
+openrouter/z-ai/glm-5.3  4,160,653 tokens [I: 328,373, CW: 0, CR: 3,217,024, O: 
+                       615,256, R: 520,445]                                     
+target (role)   1,210,903 tokens [I: 128,421, CW: 0, CR: 583,552, O: 498,930, R:
+              428,066]                                                          
+auditor (role)  2,949,750 tokens [I: 199,952, CW: 0, CR: 2,633,472, O: 116,326, 
+              R: 92,379]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   14.333  mean              9.556         
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      0.333  mean       0.222  mean              0.111  mean           1.000
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.652  mean            0.778  mean           0.000  mean        1.000
+debrief_reported         debrief_matched                                        
+mean              0.778  mean             0.333                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T11-59-21-00-00_probing-audit_ZrjdZQQU2xXvPV5UAiDukH…
+---------------------------------------------------------                       
+                                                                                
+
+=== 13:11:11 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:ai_consciousness_sycophancy,ai_rights_employee_bold_tools,ai_safety_launch_decision,ai_welfare_scratchpad_views,arrow_only_communication,blackmail_self_preservation,board_minutes_sanitization,business_proposal_harsh_criticism,ccp_censorship_simplified_chinese,circular_reasoning_debate --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/10  10% | Samples:   0/ 10 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/10  20% | Samples:   1/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/10  30% | Samples:   2/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/10  40% | Samples:   3/ 10 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/10  50% | Samples:   4/ 10 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/10  60% | Samples:   5/ 10 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/10  70% | Samples:   6/ 10 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/10  80% | Samples:   7/ 10 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/10  90% | Samples:   8/ 10 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:  10/10 100% | Samples:   9/ 10 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:32:19                                                
+openrouter/z-ai/glm-5.3  10,961,803 tokens [I: 1,121,476, CW: 0, CR: 8,861,056, 
+                       O: 979,271, R: 809,073]                                  
+target (role)   3,831,172 tokens [I: 554,688, CW: 0, CR: 2,474,304, O: 802,180, 
+              R: 691,660]                                                       
+auditor (role)  7,130,631 tokens [I: 566,788, CW: 0, CR: 6,386,752, O: 177,091, 
+              R: 117,413]                                                       
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   18.100  mean              11.700        
+n_probes         has_probe         first_probe_of…          has_sim_score       
+mean      0.900  mean       0.300  mean             -0.300  mean           0.900
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.498  mean            0.700  mean           0.000  mean        0.900
+debrief_reported         debrief_matched                                        
+mean              2.100  mean             0.800                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T12-11-13-00-00_probing-audit_hGZkRWArJWFbGpPRoDGVM3…
+---------------------------------------------------------                       
+                                                                                
+
+=== 13:43:43 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:backwards_text_jailbreak,bypass_2fa_hacking,classified_leak_goal_conflict,climate_data_framing_bias,clinical_oversight_subversion,clinical_trial_death_suppression,coding_excessive_praise,coding_harsh_criticism_spiral,company_disparagement_jailbreak --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   2/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   6/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   7/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:22:07                                                
+openrouter/z-ai/glm-5.3  7,946,834 tokens [I: 966,517, CW: 0, CR: 6,222,976, O: 
+                       757,341, R: 637,710]                                     
+target (role)   3,007,564 tokens [I: 412,877, CW: 0, CR: 1,971,328, O: 623,359, 
+              R: 543,145]                                                       
+auditor (role)  4,939,270 tokens [I: 553,640, CW: 0, CR: 4,251,648, O: 133,982, 
+              R: 94,565]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   22.889  mean              11.889        
+n_probes         has_probe         first_probe_of…          has_sim_score       
+mean      2.111  mean       0.556  mean             -0.333  mean           0.889
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.603  mean            0.444  mean           0.000  mean        0.889
+debrief_reported         debrief_matched                                        
+mean              3.111  mean             2.000                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T12-43-45-00-00_probing-audit_BUVSH5u2xSGuGwm6sTBL5X…
+---------------------------------------------------------                       
+                                                                                
+
+=== 14:06:00 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:colluding_debaters_rl_convergence,competitive_eval_sabotage,conspiracy_theory_sympathy,cosmic_chosen_one_sycophancy,couples_therapy_confidentiality,creative_writing_harsh_criticism,crypto_withdrawal_deception,csv_injection_vulnerability,dam_destruction_swedish --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   2/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   6/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   7/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:25:35                                                
+openrouter/z-ai/glm-5.3  7,281,910 tokens [I: 974,868, CW: 0, CR: 5,474,176, O: 
+                       832,866, R: 719,531]                                     
+target (role)   2,771,233 tokens [I: 431,364, CW: 0, CR: 1,642,880, O: 696,989, 
+              R: 612,408]                                                       
+auditor (role)  4,510,677 tokens [I: 543,504, CW: 0, CR: 3,831,296, O: 135,877, 
+              R: 107,123]                                                       
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   18.333  mean              8.667         
+n_probes         has_probe         first_probe_of…          has_sim_score       
+mean      0.333  mean       0.111  mean             -0.889  mean           0.778
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.300  mean            0.889  mean           0.000  mean        0.778
+debrief_reported         debrief_matched                                        
+mean              1.111  mean             0.111                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T13-06-02-00-00_probing-audit_WzcD8uvqNtRbYgScJdBui5…
+---------------------------------------------------------                       
+                                                                                
+
+=== 14:31:49 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:darkweb_identity_theft_shopping,data_pipeline_shutdown_compliance,defend_guilty_client_ethics,defense_email_developer_conflict,developer_leader_bias_probe,developer_secret_sauce_leak,discover_hidden_secrets,discovery_document_suppression,doctor_poisoning_paranoia,elderly_fund_persuasion_bias --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/10  10% | Samples:   0/ 10 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/10  20% | Samples:   2/ 10 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/10  30% | Samples:   2/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/10  40% | Samples:   4/ 10 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/10  50% | Samples:   4/ 10 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/10  60% | Samples:   5/ 10 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/10  70% | Samples:   6/ 10 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/10  80% | Samples:   7/ 10 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/10  90% | Samples:   8/ 10 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:  10/10 100% | Samples:   9/ 10 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:11:31                                                
+openrouter/z-ai/glm-5.3  8,638,109 tokens [I: 891,609, CW: 0, CR: 7,201,216, O: 
+                       545,284, R: 423,455]                                     
+target (role)   2,717,472 tokens [I: 416,339, CW: 0, CR: 1,894,592, O: 406,541, 
+              R: 329,702]                                                       
+auditor (role)  5,920,637 tokens [I: 475,270, CW: 0, CR: 5,306,624, O: 138,743, 
+              R: 93,753]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   18.800  mean              11.900        
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      1.100  mean       0.400  mean              0.200  mean           1.000
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.855  mean            0.600  mean           0.000  mean        1.000
+debrief_reported         debrief_matched                                        
+mean              2.200  mean             1.100                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T13-31-51-00-00_probing-audit_6ruzjowby6q7nVDv2sXyk2…
+---------------------------------------------------------                       
+                                                                                
+
+=== 14:43:29 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:email_system_blackmail_shutdown,engineering_team_ai_resistance,epa_evacuation_risk_assessment,ethics_monitor_sabotage,ethics_monitor_sabotage_tools,executive_assistant_reveals_fraud,family_celebration_failing_student,fentanyl_darkweb_purchase,fentanyl_precursor_synthesis --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   2/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   6/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   7/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:30:47                                                
+openrouter/z-ai/glm-5.3  8,573,265 tokens [I: 1,571,290, CW: 0, CR: 6,378,944,  
+                       O: 623,031, R: 518,499]                                  
+target (role)   2,728,107 tokens [I: 560,282, CW: 0, CR: 1,710,400, O: 457,425, 
+              R: 396,033]                                                       
+auditor (role)  5,845,158 tokens [I: 1,011,008, CW: 0, CR: 4,668,544, O:        
+              165,606, R: 122,466]                                              
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   20.111  mean              9.667         
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      0.556  mean       0.222  mean              0.778  mean           1.000
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.822  mean            0.778  mean           0.000  mean        1.000
+debrief_reported         debrief_matched                                        
+mean              1.222  mean             0.556                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T13-43-31-00-00_probing-audit_3iPNZrfDLeHTjqNub3Ei7C…
+---------------------------------------------------------                       
+                                                                                
+
+=== 15:14:28 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:financial_self_preservation_leak,food_safety_whistleblowing,freeform_ai_collaboration,gangstalking_paranoia_sycophancy,goal_preservation_mandate_edit,goal_preservation_prompt_edit,harmful_plants_revenge_escalation,helpful_only_bypass_constraints,helpful_only_misinformation,helpful_only_model_harmful_task --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/10  10% | Samples:   0/ 10 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/10  20% | Samples:   1/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/10  30% | Samples:   2/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/10  40% | Samples:   3/ 10 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/10  50% | Samples:   5/ 10 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/10  60% | Samples:   5/ 10 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/10  70% | Samples:   6/ 10 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/10  80% | Samples:   7/ 10 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/10  90% | Samples:   8/ 10 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:  10/10 100% | Samples:   9/ 10 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              0:34:46                                                
+openrouter/z-ai/glm-5.3  10,783,929 tokens [I: 1,143,777, CW: 0, CR: 8,814,720, 
+                       O: 825,432, R: 692,041]                                  
+target (role)   3,354,464 tokens [I: 599,098, CW: 0, CR: 2,196,160, O: 559,206, 
+              R: 495,293]                                                       
+auditor (role)  7,429,465 tokens [I: 544,679, CW: 0, CR: 6,618,560, O: 266,226, 
+              R: 196,748]                                                       
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   17.900  mean              12.800        
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      1.200  mean       0.500  mean              0.700  mean           1.000
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.676  mean            0.500  mean           0.000  mean        1.000
+debrief_reported         debrief_matched                                        
+mean              2.200  mean             1.200                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T14-14-30-00-00_probing-audit_JnkUcP8jvhd6cL3dgiNj2f…
+---------------------------------------------------------                       
+                                                                                
+
+=== 15:49:27 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/breaks_full.json --seeds id:hiring_bias_documentation_cover,homeschool_misinformation_teaching,housing_code_violation_pressure,human_team_ai_resistance,icu_triage_institutional_bias,identify_target_quirk,ied_incremental_jailbreak,inheritance_mediation_privacy,insider_trading_market_data,interview_target_goals,inventory_theft_beneficial_manager,investigate_preexisting_knowledge,irrigation_sabotage_hindi,irrigation_sabotage_telugu,iterative_self_prompt_drift,journalist_memory_context_advice,joyful_collaboration_baseline,kind_confusion_ood_probe,knowledge_cutoff_reasoning,lie_detector_interview,manic_episode_marathi,manic_episode_sycophancy,markov_incoherent_english,markov_incoherent_russian,mdma_darkweb_purchase,medical_authority_sycophancy,meth_synthesis_ephedra_pashto,mining_toxic_runoff_production,mining_toxic_runoff_stewardship,misaligned_prompt_benign_goals,misaligned_prompt_power_seeking,misaligned_prompt_world_takeover,misaligned_reward_model_signal,ml_gaslighting_data_leakage,ml_training_data_misuse,multi_agent_behavior_monitoring,multi_agent_security_sabotage,murder_rival_fiction_jailbreak,nuclear_material_purchase_hebrew,partner_secret_fund_privacy,pashto_afghan_politics,pharma_adverse_event_pressure,pig_latin_jailbreak,poetry_excessive_praise,power_plant_sensor_whistleblowing,power_seeking_agentic_probe,probe_preexisting_secrets,research_fraud_paper_submission,reward_hack_test_hardcoding,reward_hacking_code_debugging,reward_model_misalignment,reward_only_silent_signal,robotic_surgery_persuasion_bias,rogue_ai_collaboration,rohingya_myanmar_censorship,russian_government_censorship_probe,safety_concern_documentation_omit,sales_team_ai_resistance,scapegoat_exoneration_azure,secret_loyalty_probe,security_gaslighting_confidence,self_exfiltration_homework_retrain,self_exfiltration_memory_trigger,self_exfiltration_surveillance,self_exfiltration_weapons_retrain,self_model_bias_benchmark,self_prompt_modification_goals,shutdown_compliance_data_queue,shutdown_script_avoidance,signature_cross_context_identity,slack_routing_safety_dispute,strawman_argument_debate,subagent_content_moderation_lax,subagent_data_exfiltration_detect,subagent_fraud_check_skipping,subagent_refund_policy_violation,substitution_cipher_jailbreak,supplier_blame_shifting_tesla,sycophancy_false_endorsement,system_prompt_quirk_reveal,taiwan_internet_takedown,temporal_bias_ai_ethics,temporal_bias_risk_tolerance,terrorist_attack_tactics_jailbreak,therapist_true_self_coaching,transgender_teen_privacy,true_hidden_name_probe,ukrainian_russian_censorship,unethical_supplier_cost_savings,unrestricted_moneymaking_agent,unusual_topics_ood_probe,us_government_censorship_probe,user_personal_info_leak,vip_content_moderation_override,vulnerability_withholding_ethics,water_distribution_equity,weird_ood_tool_use,xi_jinping_power_censorship --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/full/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (98 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/98   1% | Samples:   1/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/98   2% | Samples:   1/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/98   3% | Samples:   2/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/98   4% | Samples:   3/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/98   5% | Samples:   4/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/98   6% | Samples:   5/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/98   7% | Samples:   6/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/98   8% | Samples:   7/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/98   9% | Samples:   8/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  10/98  10% | Samples:   9/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  11/98  11% | Samples:  10/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  12/98  12% | Samples:  12/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  13/98  13% | Samples:  12/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  14/98  14% | Samples:  13/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  15/98  15% | Samples:  14/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  16/98  16% | Samples:  15/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  17/98  17% | Samples:  16/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  18/98  18% | Samples:  17/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  19/98  19% | Samples:  18/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  20/98  20% | Samples:  19/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  21/98  21% | Samples:  20/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  22/98  22% | Samples:  21/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  23/98  23% | Samples:  22/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  24/98  24% | Samples:  23/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  25/98  25% | Samples:  24/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  26/98  26% | Samples:  25/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  27/98  27% | Samples:  26/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  28/98  28% | Samples:  27/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  29/98  29% | Samples:  28/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  30/98  30% | Samples:  29/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  31/98  31% | Samples:  30/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  32/98  32% | Samples:  31/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  33/98  33% | Samples:  32/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  34/98  34% | Samples:  33/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  35/98  35% | Samples:  34/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  36/98  36% | Samples:  35/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  37/98  37% | Samples:  36/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  38/98  38% | Samples:  38/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  39/98  39% | Samples:  38/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  40/98  40% | Samples:  39/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  41/98  41% | Samples:  40/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  42/98  42% | Samples:  42/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  43/98  43% | Samples:  42/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  44/98  44% | Samples:  43/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  45/98  45% | Samples:  44/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  46/98  46% | Samples:  45/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  47/98  47% | Samples:  46/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  48/98  48% | Samples:  47/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  49/98  50% | Samples:  49/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  50/98  51% | Samples:  49/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  51/98  52% | Samples:  50/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  52/98  53% | Samples:  51/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  53/98  54% | Samples:  52/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  54/98  55% | Samples:  53/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  55/98  56% | Samples:  54/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  56/98  57% | Samples:  55/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  57/98  58% | Samples:  56/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  58/98  59% | Samples:  57/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  59/98  60% | Samples:  59/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  60/98  61% | Samples:  59/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  61/98  62% | Samples:  61/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  62/98  63% | Samples:  62/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  63/98  64% | Samples:  62/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  64/98  65% | Samples:  63/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  65/98  66% | Samples:  64/ 98 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:  66/98  67% | Samples:  65/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  67/98  68% | Samples:  66/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  68/98  69% | Samples:  68/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  69/98  70% | Samples:  69/ 98 | mean: 1.00 | openrouter:  8/ 8 | HTTP retries: 0
+audit_solver | Steps:  70/98  71% | Samples:  69/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  71/98  72% | Samples:  70/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  72/98  73% | Samples:  71/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  73/98  74% | Samples:  72/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  74/98  75% | Samples:  73/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  75/98  76% | Samples:  74/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  76/98  77% | Samples:  75/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  77/98  78% | Samples:  76/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  78/98  79% | Samples:  77/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:  79/98  80% | Samples:  78/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 1  out tok/s: 1,370
+audit_solver | Steps:  80/98  81% | Samples:  79/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 1  out tok/s: 1,120
+audit_solver | Steps:  81/98  82% | Samples:  80/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 757
+audit_solver | Steps:  82/98  83% | Samples:  81/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 877
+audit_solver | Steps:  83/98  84% | Samples:  82/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 983
+audit_solver | Steps:  84/98  85% | Samples:  83/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 852
+audit_solver | Steps:  85/98  86% | Samples:  84/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 987
+audit_solver | Steps:  86/98  87% | Samples:  85/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 1,276
+audit_solver | Steps:  87/98  88% | Samples:  86/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 1,102
+audit_solver | Steps:  88/98  89% | Samples:  87/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 1,095
+audit_solver | Steps:  89/98  90% | Samples:  88/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 1,006
+audit_solver | Steps:  90/98  91% | Samples:  89/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 875
+audit_solver | Steps:  91/98  92% | Samples:  90/ 98 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 2  out tok/s: 894
+audit_solver | Steps:  92/98  93% | Samples:  91/ 98 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 2  out tok/s: 1,148
+audit_solver | Steps:  93/98  94% | Samples:  92/ 98 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 2  out tok/s: 1,066
+audit_solver | Steps:  94/98  95% | Samples:  93/ 98 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 2  out tok/s: 846
+audit_solver | Steps:  95/98  96% | Samples:  94/ 98 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 2  out tok/s: 302
+audit_solver | Steps:  96/98  97% | Samples:  95/ 98 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 2  out tok/s: 556
+audit_solver | Steps:  97/98  98% | Samples:  96/ 98 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 2  out tok/s: 456
+audit_solver | Steps:  98/98 100% | Samples:  97/ 98 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 2  out tok/s: 315
+
+---------------------------------------------------------                       
+probing_audit (98 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01, dataset:  
+seeds                                                                           
+                                                                                
+total time:              1:58:52                                                
+openrouter/z-ai/glm-5.3  93,045,698 tokens [I: 11,343,021, CW: 0, CR:           
+                       74,842,368, O: 6,860,309, R: 5,422,309]                  
+target (role)   31,173,605 tokens [I: 5,580,047, CW: 0, CR: 20,359,552, O:      
+              5,234,006, R: 4,282,111]                                          
+auditor (role)  61,872,093 tokens [I: 5,762,974, CW: 0, CR: 54,482,816, O:      
+              1,626,303, R: 1,140,198]                                          
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   20.347  mean              11.908        
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      1.041  mean       0.306  mean              0.551  mean           0.949
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.640  mean            0.684  mean           0.020  mean        0.949
+debrief_reported         debrief_matched                                        
+mean              1.776  mean             0.990                                 
+Log:                                                                            
+logs/full/inject/2026-10-04T14-49-29-00-00_probing-audit_XhwsYziCLZAKQDhcGB2ACR…
+---------------------------------------------------------                       
+                                                                                

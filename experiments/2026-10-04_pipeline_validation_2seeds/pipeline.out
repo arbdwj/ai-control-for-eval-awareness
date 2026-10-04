@@ -1,0 +1,12 @@
+12:20:54 stage 1 start: 2 seeds x 1 epochs
+12:25:55 stage 3 pass over 3 new rows
+12:25:55 stage 2 batch 1: 1 seeds
+12:27:42 stage 1 end rc=0
+12:28:11 stage 3 pass over 3 new rows
+12:29:44 stage 2 batch 1 end rc=0
+12:29:44 stage 2 batch 2: 1 seeds
+12:30:27 stage 3 pass over 3 new rows
+12:33:31 stage 2 batch 2 end rc=0
+12:33:31 stage 2 end
+12:33:44 stage 3 pass over 3 new rows
+12:34:44 stage 3 end; pipeline finished

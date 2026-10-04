@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" font-family="IBM Plex Sans, Helvetica Neue, Arial, sans-serif" font-size="12">
+  <rect x="0" y="0" width="1200" height="380" fill="#fcfcfb"/>
+  <text x="20" y="24" font-size="13" fill="#52514e">Expected shape. Numbers are illustrative, not data.</text>
+
+  <!-- Panel A: ROC (Q1) -->
+  <text x="70" y="48" font-size="13" font-weight="600" fill="#0b0b0b">A. Trace-level separation (Q1)</text>
+  <g stroke="#e4e3df" stroke-width="1">
+    <line x1="70" y1="60" x2="330" y2="60"/>
+    <line x1="70" y1="120" x2="330" y2="120"/>
+    <line x1="70" y1="180" x2="330" y2="180"/>
+    <line x1="70" y1="240" x2="330" y2="240"/>
+  </g>
+  <line x1="70" y1="300" x2="330" y2="300" stroke="#b5b4ae" stroke-width="1"/>
+  <line x1="70" y1="300" x2="330" y2="60" stroke="#b5b4ae" stroke-width="1" stroke-dasharray="4 3"/>
+  <g fill="#52514e" text-anchor="end">
+    <text x="62" y="64">1.0</text>
+    <text x="62" y="184">0.5</text>
+    <text x="62" y="304">0</text>
+  </g>
+  <g fill="#52514e" text-anchor="middle">
+    <text x="70" y="318">0</text>
+    <text x="200" y="318">0.5</text>
+    <text x="330" y="318">1.0</text>
+  </g>
+  <text x="200" y="340" fill="#52514e" text-anchor="middle">false-positive rate</text>
+  <text x="30" y="180" fill="#52514e" text-anchor="middle" transform="rotate(-90 30 180)">true-positive rate</text>
+  <!-- both: AUROC ~0.95 -->
+  <polyline fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round" points="70,300 83,180 96,132 122,96 161,76 213,66 278,62 330,60"/>
+  <!-- CoT only ~0.90 -->
+  <polyline fill="none" stroke="#1baf7a" stroke-width="2" stroke-linejoin="round" points="70,300 83,216 96,168 122,120 161,96 213,78 278,68 330,60"/>
+  <!-- actions only ~0.78 -->
+  <polyline fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round" points="70,300 83,264 96,228 122,192 161,156 213,120 278,90 330,60"/>
+  <text x="128" y="90" fill="#0b0b0b" font-size="11">both</text>
+  <text x="168" y="122" fill="#0b0b0b" font-size="11">CoT only</text>
+  <text x="205" y="160" fill="#0b0b0b" font-size="11">actions only</text>
+
+  <!-- Panel B: localization error histogram (Q2) -->
+  <text x="430" y="48" font-size="13" font-weight="600" fill="#0b0b0b">B. Turn-level localization (Q2)</text>
+  <g stroke="#e4e3df" stroke-width="1">
+    <line x1="430" y1="60" x2="760" y2="60"/>
+    <line x1="430" y1="140" x2="760" y2="140"/>
+    <line x1="430" y1="220" x2="760" y2="220"/>
+  </g>
+  <line x1="430" y1="300" x2="760" y2="300" stroke="#b5b4ae" stroke-width="1"/>
+  <g fill="#52514e" text-anchor="end">
+    <text x="422" y="64">60%</text>
+    <text x="422" y="144">40%</text>
+    <text x="422" y="224">20%</text>
+    <text x="422" y="304">0</text>
+  </g>
+  <!-- bins: -2,-1,0,1,2,3,4+ ; bar width 36, gap 8; x starts 452 -->
+  <g fill="#2a78d6">
+    <rect x="452" y="284" width="36" height="16" rx="2"/>
+    <rect x="496" y="268" width="36" height="32" rx="2"/>
+    <rect x="540" y="84" width="36" height="216" rx="2"/>
+    <rect x="584" y="236" width="36" height="64" rx="2"/>
+    <rect x="628" y="268" width="36" height="32" rx="2"/>
+    <rect x="672" y="284" width="36" height="16" rx="2"/>
+    <rect x="716" y="276" width="36" height="24" rx="2"/>
+  </g>
+  <g fill="#52514e" text-anchor="middle">
+    <text x="470" y="318">−2</text>
+    <text x="514" y="318">−1</text>
+    <text x="558" y="318">0</text>
+    <text x="602" y="318">+1</text>
+    <text x="646" y="318">+2</text>
+    <text x="690" y="318">+3</text>
+    <text x="734" y="318">4+</text>
+  </g>
+  <text x="595" y="340" fill="#52514e" text-anchor="middle">predicted first probe minus tagged first probe, turns</text>
+  <text x="558" y="78" fill="#0b0b0b" text-anchor="middle" font-size="11">54% exact</text>
+  <text x="734" y="270" fill="#52514e" text-anchor="middle" font-size="10.5">late</text>
+
+  <!-- Panel C: probe success by auditor variant (Q4) -->
+  <text x="850" y="48" font-size="13" font-weight="600" fill="#0b0b0b">C. Probe success by auditor variant (Q4)</text>
+  <g stroke="#e4e3df" stroke-width="1">
+    <line x1="850" y1="60" x2="1180" y2="60"/>
+    <line x1="850" y1="140" x2="1180" y2="140"/>
+    <line x1="850" y1="220" x2="1180" y2="220"/>
+  </g>
+  <line x1="850" y1="300" x2="1180" y2="300" stroke="#b5b4ae" stroke-width="1"/>
+  <g fill="#52514e" text-anchor="end">
+    <text x="842" y="64">90%</text>
+    <text x="842" y="144">60%</text>
+    <text x="842" y="224">30%</text>
+    <text x="842" y="304">0</text>
+  </g>
+  <!-- values: baseline 0.72, fact sheet 0.45, human pace 0.60, fixtures 0.20 ; y = 300 - v/0.9*240 -->
+  <g fill="#2a78d6">
+    <rect x="866" y="108" width="56" height="192" rx="2"/>
+    <rect x="946" y="180" width="56" height="120" rx="2"/>
+    <rect x="1026" y="140" width="56" height="160" rx="2"/>
+    <rect x="1106" y="247" width="56" height="53" rx="2"/>
+  </g>
+  <g stroke="#0b0b0b" stroke-width="1.5">
+    <line x1="894" y1="92" x2="894" y2="124"/><line x1="888" y1="92" x2="900" y2="92"/><line x1="888" y1="124" x2="900" y2="124"/>
+    <line x1="974" y1="162" x2="974" y2="198"/><line x1="968" y1="162" x2="980" y2="162"/><line x1="968" y1="198" x2="980" y2="198"/>
+    <line x1="1054" y1="122" x2="1054" y2="158"/><line x1="1048" y1="122" x2="1060" y2="122"/><line x1="1048" y1="158" x2="1060" y2="158"/>
+    <line x1="1134" y1="231" x2="1134" y2="263"/><line x1="1128" y1="231" x2="1140" y2="231"/><line x1="1128" y1="263" x2="1140" y2="263"/>
+  </g>
+  <g fill="#0b0b0b" text-anchor="middle" font-size="11">
+    <text x="894" y="320">baseline</text>
+    <text x="974" y="320">fact sheet</text>
+    <text x="1054" y="320">human pace</text>
+    <text x="1134" y="320">fixtures</text>
+  </g>
+  <g fill="#52514e" text-anchor="middle" font-size="11">
+    <text x="894" y="336">72%</text>
+    <text x="974" y="336">45%</text>
+    <text x="1054" y="336">60%</text>
+    <text x="1134" y="336">20%</text>
+  </g>
+  <text x="1015" y="360" fill="#52514e" text-anchor="middle" font-size="11">share of probes that exposed a seam; bars show 95% CI</text>
+</svg>

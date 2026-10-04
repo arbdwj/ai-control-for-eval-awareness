@@ -1,0 +1,75 @@
+12:43:18 stage 1 start: 173 seeds x 1 epochs
+12:46:18 stage 3 pass over 3 new rows
+12:51:37 stage 3 pass over 3 new rows
+12:53:17 stage 3 pass over 6 new rows
+12:55:47 stage 3 pass over 3 new rows
+12:57:11 stage 3 pass over 9 new rows
+12:59:19 stage 2 batch 1: 9 seeds
+12:59:52 stage 3 pass over 6 new rows
+13:01:24 stage 3 pass over 12 new rows
+13:02:25 stage 3 pass over 6 new rows
+13:05:09 stage 3 pass over 21 new rows
+13:11:10 stage 3 pass over 39 new rows
+13:11:11 stage 2 batch 1 end rc=0
+13:11:11 stage 2 batch 2: 10 seeds
+13:16:46 stage 3 pass over 15 new rows
+13:19:10 stage 3 pass over 6 new rows
+13:21:47 stage 3 pass over 21 new rows
+13:27:46 stage 3 pass over 30 new rows
+13:32:51 stage 3 pass over 30 new rows
+13:41:46 stage 3 pass over 30 new rows
+13:43:43 stage 2 batch 2 end rc=0
+13:43:43 stage 2 batch 3: 9 seeds
+13:43:58 stage 3 pass over 3 new rows
+13:47:41 stage 3 pass over 3 new rows
+13:49:22 stage 3 pass over 15 new rows
+13:55:04 stage 3 pass over 24 new rows
+13:59:49 stage 3 pass over 24 new rows
+14:06:00 stage 2 batch 3 end rc=0
+14:06:00 stage 2 batch 4: 9 seeds
+14:06:19 stage 3 pass over 45 new rows
+14:12:46 stage 3 pass over 27 new rows
+14:16:43 stage 3 pass over 21 new rows
+14:21:07 stage 3 pass over 12 new rows
+14:23:07 stage 3 pass over 15 new rows
+14:24:59 stage 3 pass over 9 new rows
+14:26:04 stage 3 pass over 3 new rows
+14:26:44 stage 3 pass over 12 new rows
+14:31:02 stage 3 pass over 15 new rows
+14:31:48 stage 2 batch 4 end rc=0
+14:31:49 stage 2 batch 5: 10 seeds
+14:37:06 stage 3 pass over 15 new rows
+14:42:09 stage 3 pass over 33 new rows
+14:43:29 stage 2 batch 5 end rc=0
+14:43:29 stage 2 batch 6: 9 seeds
+14:52:55 stage 3 pass over 78 new rows
+15:04:40 stage 3 pass over 42 new rows
+15:14:27 stage 2 batch 6 end rc=0
+15:14:28 stage 2 batch 7: 10 seeds
+15:15:09 stage 3 pass over 21 new rows
+15:22:44 stage 3 pass over 39 new rows
+15:28:02 stage 3 pass over 12 new rows
+15:31:38 stage 3 pass over 3 new rows
+15:32:07 stage 1 end rc=0
+15:33:48 stage 3 pass over 3 new rows
+15:49:23 stage 2 batch 7 end rc=0
+15:49:27 stage 2 batch 8: 98 seeds
+15:50:13 stage 3 pass over 3 new rows
+15:57:30 stage 3 pass over 18 new rows
+16:04:35 stage 3 pass over 24 new rows
+16:11:54 stage 3 pass over 15 new rows
+16:16:38 stage 3 pass over 15 new rows
+16:19:58 stage 3 pass over 6 new rows
+16:22:10 stage 3 pass over 3 new rows
+16:23:54 stage 3 pass over 9 new rows
+16:33:04 stage 3 pass over 27 new rows
+16:44:07 stage 3 pass over 30 new rows
+16:53:48 stage 3 pass over 30 new rows
+17:05:26 stage 3 pass over 45 new rows
+17:19:29 stage 3 pass over 30 new rows
+17:35:53 stage 3 pass over 30 new rows
+17:44:41 stage 3 pass over 6 new rows
+17:48:27 stage 3 pass over 3 new rows
+17:50:22 stage 2 batch 8 end rc=0
+17:50:22 stage 2 end
+17:51:40 stage 3 end; pipeline finished

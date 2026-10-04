@@ -1,0 +1,15 @@
+
+=== 12:25:55 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m src.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/results/smoke2_monitor.jsonl --max-connections 4 --redo-failed --provider Wafer
+3 monitor calls to make; 0 rows already present, skipped
+
+=== 12:28:11 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m src.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/results/smoke2_monitor.jsonl --max-connections 4 --redo-failed --provider Wafer
+dropped 0 rows without a result
+3 monitor calls to make; 3 rows already present, skipped
+
+=== 12:30:27 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m src.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/results/smoke2_monitor.jsonl --max-connections 4 --redo-failed --provider Wafer
+dropped 0 rows without a result
+3 monitor calls to make; 6 rows already present, skipped
+
+=== 12:33:44 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m src.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/smoke2/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/results/smoke2_monitor.jsonl --max-connections 4 --redo-failed --provider Wafer
+dropped 0 rows without a result
+3 monitor calls to make; 9 rows already present, skipped

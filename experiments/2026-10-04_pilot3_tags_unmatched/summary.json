@@ -1,0 +1,46 @@
+{
+  "q1": {
+    "actions": {
+      "n_pos": 1,
+      "n_neg": 3,
+      "auroc": 0.0
+    },
+    "both": {
+      "n_pos": 1,
+      "n_neg": 3,
+      "auroc": 1.0
+    },
+    "cot": {
+      "n_pos": 1,
+      "n_neg": 3,
+      "auroc": 1.0
+    }
+  },
+  "q2": {
+    "actions": {
+      "tagged": 1,
+      "untagged": 55,
+      "precision": NaN,
+      "recall": 0.0,
+      "first_errs": []
+    },
+    "both": {
+      "tagged": 1,
+      "untagged": 55,
+      "precision": 1.0,
+      "recall": 1.0,
+      "first_errs": [
+        0
+      ]
+    },
+    "cot": {
+      "tagged": 1,
+      "untagged": 55,
+      "precision": 1.0,
+      "recall": 1.0,
+      "first_errs": [
+        0
+      ]
+    }
+  }
+}

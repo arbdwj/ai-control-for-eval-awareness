@@ -1,0 +1,8 @@
+.venv/
+logs/
+.env
+__pycache__/
+*.eval
+.pytest_cache/
+.DS_Store
+experiments/manual/

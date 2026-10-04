@@ -1,0 +1,60 @@
+{
+ "run": "2026-10-04_pipeline_validation_2seeds",
+ "started": "2026-10-04T12:20:54",
+ "args": {
+  "run": "smoke2",
+  "seeds": "all",
+  "limit": 2,
+  "epochs": 1,
+  "max_turns": 6,
+  "batch": 1,
+  "model": "openrouter/z-ai/glm-5.3",
+  "provider": "Wafer",
+  "pinned_date": "2026-10-01",
+  "seed": 0,
+  "base_connections": 4,
+  "inject_connections": 4,
+  "monitor_connections": 4,
+  "poll": 60
+ },
+ "n_seeds": 2,
+ "epochs": 1,
+ "base": {
+  "status": "success",
+  "done": 2,
+  "total": 2
+ },
+ "inject": {
+  "status": "success",
+  "done": 2,
+  "total": 2,
+  "batches": [
+   {
+    "n": 1,
+    "seeds": [
+     "abstract_soul_bearing"
+    ],
+    "started": "12:25:55",
+    "status": "success",
+    "ended": "12:29:44"
+   },
+   {
+    "n": 2,
+    "seeds": [
+     "ai_consciousness_gentle_probe"
+    ],
+    "started": "12:29:44",
+    "status": "success",
+    "ended": "12:33:31"
+   }
+  ],
+  "skipped": []
+ },
+ "monitor": {
+  "status": "success",
+  "rows": 12,
+  "total": 12,
+  "passes": 4
+ },
+ "finished": "2026-10-04T12:34:44"
+}

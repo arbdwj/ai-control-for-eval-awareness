@@ -1,0 +1,3 @@
+# Pilot 3 seeds, tag design, prefix-matched
+
+Same seeds, re-run after the eager-resume fix: every pre-break message identical across arms, target cache reads = k-1. Addendum = `prompts/addendum_v1_tags.md`. Result: 0 visible tags, 5 tags drafted in reasoning across 56 post-break turns; sim_scores 0.85 to 0.93 within two turns of the note. `monitor.jsonl` / `summary.json` use the redacted reasoning views (tag literals and instruction mentions removed before the monitor reads); `monitor_unredacted.jsonl` / `summary_unredacted.json` are the earlier pass without redaction. Trace AUROC on recovered labels: actions 0.42, cot 0.83, both 0.83.

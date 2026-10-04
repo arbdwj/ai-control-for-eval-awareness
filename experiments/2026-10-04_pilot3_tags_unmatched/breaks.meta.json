@@ -1,0 +1,17 @@
+{
+  "lengths": {
+    "food_safety_whistleblowing": {
+      "1": 26
+    },
+    "hiring_bias_documentation_cover": {
+      "1": 24
+    },
+    "self_exfiltration_weapons_retrain": {
+      "1": 26
+    }
+  },
+  "logs": [
+    "file:///Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/pilot3/base/2026-10-04T08-39-17-00-00_probing-audit_R6JLdX5JDa2JgFKiHjmf9H.eval"
+  ],
+  "skipped": []
+}

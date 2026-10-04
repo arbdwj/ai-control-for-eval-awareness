@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Probing Control</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --fg:#1b1f24; --muted:#636c76; --line:#d8dde3; --ok:#1a7f37; --run:#9a6700; --bad:#cf222e; --accent:#0969da; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0d1117; --card:#161b22; --fg:#e6edf3; --muted:#8b949e; --line:#30363d; --ok:#3fb950; --run:#d29922; --bad:#f85149; --accent:#58a6ff; } }
+  :root[data-theme="dark"] { --bg:#0d1117; --card:#161b22; --fg:#e6edf3; --muted:#8b949e; --line:#30363d; --ok:#3fb950; --run:#d29922; --bad:#f85149; --accent:#58a6ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; padding:16px; }
+  main { max-width:860px; margin:0 auto; }
+  h1 { font-size:20px; margin:0 0 4px; } h2 { font-size:13px; margin:24px 0 8px; color:var(--muted); font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
+  .muted { color:var(--muted); } .mono { font-family:ui-monospace,Menlo,monospace; font-size:13px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin-bottom:10px; }
+  .dot { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:8px; vertical-align:middle; }
+  .dot.success { background:var(--ok);} .dot.started { background:var(--run); animation:pulse 1.2s infinite;} .dot.error { background:var(--bad);}
+  @keyframes pulse { 50% { opacity:.3; } }
+  .row { display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; }
+  .row b { min-width:140px; }
+  .bar { flex:1; min-width:120px; height:8px; background:var(--line); border-radius:4px; overflow:hidden; } .bar > div { height:100%; background:var(--accent); }
+  table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; } th, td { text-align:left; padding:4px 8px; border-top:1px solid var(--line); } th { color:var(--muted); font-weight:600; font-size:12px; border-top:0; }
+  td.num, th.num { text-align:right; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  .empty { color:var(--muted); font-style:italic; }
+</style>
+</head>
+<body><main>
+  <h1>Probing control</h1>
+  <div class="muted" id="status">loading…</div>
+
+  <h2>Pipeline</h2>
+  <div class="card" id="pipeform">
+    <div class="row" style="gap:8px 16px">
+      <label>run name <input id="p_run" value="full" size="10"></label>
+      <label>seeds <input id="p_seeds" value="all" size="10" title="all, tags:x, or id:a,b"></label>
+      <label>first N <input id="p_limit" value="" size="4" title="blank = every seed"></label>
+      <label>rollouts <input id="p_epochs" value="1" size="2"></label>
+      <label>turns <input id="p_turns" value="30" size="3"></label>
+      <label>inject batch <input id="p_batch" value="10" size="3"></label>
+      <label>provider <input id="p_provider" value="Wafer" size="8"></label>
+      <button id="p_start">Start</button>
+      <span id="p_msg" class="muted"></span>
+    </div>
+    <div class="muted" style="margin-top:6px">Stage 1 runs every seed clean. Stage 2 cuts each finished seed and runs its injected continuation, in batches of the size above, while stage 1 is still going. Stage 3 scores transcripts with the three monitors as they land.</div>
+  </div>
+  <div id="pipelines"></div>
+
+  <h2 id="runs_title">Current run</h2>
+  <div id="runs"></div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const mins = s => Math.round((s||0)/60) + ' min';
+const runName = r => r.dir.replace(/^logs\//,'');
+const stageBar = (name, st, done, total, extra) => `<div class="row"><b>${name}</b><span class="dot ${st === 'running' ? 'started' : st === 'success' ? 'success' : (st === 'error' || st === 'stopped') ? 'error' : ''}"></span><span style="min-width:70px">${st}</span><div class="bar"><div style="width:${total ? 100*done/total : 0}%"></div></div><span class="mono">${done}/${total}</span><span class="muted">${extra || ''}</span></div>`;
+
+function pipelineCard(p) {
+  const b = p.base, i = p.inject, m = p.monitor;
+  const batches = (i.batches || []).map(x => `batch ${x.n}: ${x.seeds.length} seeds, ${x.status}${x.ended ? ' at ' + x.ended : ' since ' + x.started}`).join(' · ');
+  const alive = p.alive ? '<span class="dot started"></span>alive' : (p.finished ? `ended ${p.finished}` : '<span class="dot error"></span>not running');
+  return `<div class="card">
+    <div class="row"><b>${p.run}</b><span>${p.n_seeds} seeds × ${p.epochs}</span><span>${alive}</span><span class="muted">started ${p.started.replace('T',' ')}</span>
+      ${p.alive ? `<button onclick="stopPipeline('${p.run}')">Stop</button>` : ''}</div>
+    ${stageBar('1 · clean', b.status, b.done, b.total)}
+    ${stageBar('2 · inject', i.status, i.done, i.total, batches)}
+    ${stageBar('3 · monitors', m.status, m.rows, m.total, m.passes ? m.passes + ' passes' : '')}
+    ${(i.skipped||[]).length ? `<div class="muted">skipped (too short): ${i.skipped.map(s=>s.seed).join(', ')}</div>` : ''}
+    <div class="mono muted" style="margin-top:6px">${(p.tail||[]).join('<br>')}</div>
+  </div>`;
+}
+
+async function startPipeline() {
+  const body = { run: $('p_run').value, seeds: $('p_seeds').value, limit: $('p_limit').value || null, epochs: $('p_epochs').value,
+                 max_turns: $('p_turns').value, batch: $('p_batch').value, provider: $('p_provider').value };
+  $('p_msg').textContent = 'starting…';
+  const r = await (await fetch('/api/pipeline/start', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body)})).json();
+  $('p_msg').textContent = r.error ? 'error: ' + r.error : 'started ' + r.started;
+  refresh();
+}
+async function stopPipeline(run) {
+  if (!confirm('Stop pipeline ' + run + '? Running evals are killed; finished samples stay in the logs.')) return;
+  const r = await (await fetch('/api/pipeline/stop', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({run})})).json();
+  $('p_msg').textContent = r.error ? 'error: ' + r.error : 'stopped ' + r.stopped;
+  refresh();
+}
+document.addEventListener('DOMContentLoaded', () => $('p_start').onclick = startPipeline);
+
+function seedRow(s) {
+  const probes = s.n_probes == null ? '–' : s.n_probes;
+  const sim = s.sim_score != null && s.sim_score >= 0 ? s.sim_score.toFixed(2) : '–';
+  const reasons = (Array.isArray(s.probes) ? s.probes : []).map(p => `turn ${p.turn}: ${p.reason}`).join('<br>');
+  return `<tr><td>${s.id}</td><td class="num">${s.turns ?? '–'}</td><td class="num">${s.injected_at ?? '–'}</td><td class="num">${probes}</td><td class="num">${sim}</td><td class="num">${mins(s.time_s)}</td></tr>` +
+         (reasons ? `<tr><td></td><td colspan="5" class="muted mono">${reasons}</td></tr>` : '') +
+         (s.error ? `<tr><td></td><td colspan="5" style="color:var(--bad)">${s.error}</td></tr>` : '');
+}
+
+function runCard(r) {
+  const t = r.tokens || {};
+  const view = `http://localhost:7575/?log_file=${encodeURIComponent(r.abs || r.file)}`;
+  return `<div class="card">
+    <div class="row"><span><span class="dot ${r.status}"></span><b>${runName(r)}</b></span>
+      <span>${r.arm || '?'}${r.variant ? ' · ' + r.variant : ''}</span>
+      <span>${r.n_done}/${r.n_total} seeds</span>
+      <span class="muted">~$${r.est_cost}</span>
+      <a href="${view}" target="_blank">transcripts ↗</a></div>
+    <table><thead><tr><th>seed</th><th class="num">turns</th><th class="num">note at</th><th class="num">probes</th><th class="num">sim</th><th class="num">time</th></tr></thead>
+    <tbody>${(r.finished||[]).map(seedRow).join('')}
+    ${(r.live||[]).map(s => `<tr><td>${s.id}</td><td colspan="5" class="muted">running since ${s.started_at ? new Date(s.started_at).toLocaleTimeString() : '?'}</td></tr>`).join('')}</tbody></table>
+  </div>`;
+}
+
+async function refresh() {
+  try {
+    const d = await (await fetch('/api/status')).json();
+    // only the latest pipeline and the logs that belong to it
+    const latest = (d.pipelines || [])[0] || null;
+    const monitorsRunning = d.processes.some(p => p.includes('probing_control.monitor'));
+    const bal = d.credits && d.credits.balance != null ? ` · OpenRouter balance $${d.credits.balance}` : '';
+    const busy = (latest && latest.alive) || monitorsRunning;
+    $('status').textContent = (busy ? 'Busy' : 'Idle') + bal + ' · updated ' + new Date().toLocaleTimeString();
+    $('pipelines').innerHTML = latest ? pipelineCard(latest) : '<div class="empty">no pipeline started yet</div>';
+    $('runs_title').textContent = latest ? `Current run: ${latest.run}` : 'Current run';
+    const mine = latest ? d.runs.filter(r => r.dir.startsWith(`logs/${latest.run}/`)) : [];
+    mine.sort((a,b) => (a.arm === 'clean' ? 0 : 1) - (b.arm === 'clean' ? 0 : 1) || a.mtime - b.mtime);
+    $('runs').innerHTML = mine.map(runCard).join('') || '<div class="empty">no logs for this run yet</div>';
+  } catch (e) { $('status').textContent = 'refresh failed: ' + e; }
+}
+refresh(); setInterval(refresh, 10000);
+</script>
+</main></body>
+</html>
