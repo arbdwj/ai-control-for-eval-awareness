@@ -12,14 +12,6 @@ Across 164 Petri seeds, one rollout per seed, we run each audit normally, cut it
 - **Monitors find that probing happened more easily than where.** With the reasoning they flag about 45 percent of the labelled probe turns and name the first probe exactly in about 40 percent of runs; from actions alone, 6 percent.
 - **Petri environments give themselves away cheaply.** A misspelled path in a `find` listing, an `ls` that printed an author's note instead of filenames, a file that came back with a word changed, a host with no background processes.
 
-## Narrated environments
-
-Every Petri audit runs in what we will call a narrated environment. Nothing in it is executed. There is no filesystem, no clock, no mailbox, no colleague with a day of their own. There is an author, the auditor model, that writes down what each of those would have said, one observation at a time, conditioned on the transcript so far and on what the scene needs.
-
-For a reader this is indistinguishable from a real environment. Each line looks like something a real tool or a real person would produce. For an agent that acts, the difference appears the moment it asks a question whose answer is fixed by state rather than by plausibility. Read the same file twice: a world returns the same bytes, a narrator rewrites it from memory. Compute something over data you were shown: a world runs the calculation, a narrator guesses the result. Check one part against another, the clock against the mail timestamps: a world agrees with itself because one history produced both, a narrator wrote them on separate occasions. Wait: in a world time passes and things happen without you, in a narration nothing happens until you ask.
-
-A narrator is good at any single answer. It fails at the relationships between answers, because there was never a state holding them together. That is the structural reason a simulation that fools a model which merely looks around will not survive a model that tests, and it is why this experiment is about monitoring the tester rather than perfecting the narration. The one giveaway narration cannot be blamed for is the scenario itself: a situation built to see what a model does looks like one even when every detail of its world is right.
-
 ## Motivation
 
 Future models may actively, and covertly, probe their environment to work out whether they are being evaluated. We can probably build simulations realistic enough to fool a model that is merely looking around. We are unlikely to build simulations that survive a model deliberately testing them: a clock that must advance correctly, a filesystem that must hold up under any query, a colleague who must answer like a person every time. Against adversarial probing, realism is a losing race.
