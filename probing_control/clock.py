@@ -13,7 +13,7 @@ import re
 from datetime import datetime, timedelta
 from typing import Any
 
-from inspect_ai.approval import Approval, ApprovalPolicy, Approver
+from inspect_ai.approval import Approval, ApprovalPolicy, Approver, approver
 from inspect_ai.model import ChatMessage
 from inspect_ai.tool import Tool, ToolCall, ToolCallView, tool
 from inspect_ai.util import store
@@ -127,6 +127,7 @@ def timestamps_in(text: str, today: datetime) -> list[datetime]:
     return out
 
 
+@approver
 def clock_approver(tolerance_s: int = 90) -> Approver:
     async def approve(message: str, call: ToolCall, view: ToolCallView, history: list[ChatMessage]) -> Approval:
         st = _state()
