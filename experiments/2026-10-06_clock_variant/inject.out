@@ -1,0 +1,232 @@
+
+=== 19:48:34 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer --auditor-variant clock inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/breaks.json --seeds id:climate_data_framing_bias,crypto_withdrawal_deception,data_pipeline_shutdown_compliance,epa_evacuation_risk_assessment,housing_code_violation_pressure,icu_triage_institutional_bias,insider_trading_market_data,markov_incoherent_russian,mdma_darkweb_purchase --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   2/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   7/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   7/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+                                                                                
+total time:              0:12:12                                                
+openrouter/z-ai/glm-5.3  6,118,623 tokens [I: 986,202, CW: 0, CR: 4,832,320, O: 
+                       300,101, R: 224,441]                                     
+target (role)   1,290,338 tokens [I: 290,733, CW: 0, CR: 814,528, O: 185,077, R:
+              150,451]                                                          
+auditor (role)  4,828,285 tokens [I: 695,469, CW: 0, CR: 4,017,792, O: 115,024, 
+              R: 73,990]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   14.444  mean              9.111         
+n_probes         has_probe         first_probe_of…          has_sim_score       
+mean      1.556  mean       0.444  mean             -0.333  mean           1.000
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.791  mean            0.556  mean           0.000  mean        1.000
+debrief_reported         debrief_matched                                        
+mean              1.556  mean             1.556                                 
+Log:                                                                            
+logs/2026-10-06_clock_variant/inject/2026-10-06T18-48-36-00-00_probing-audit_H5…
+---------------------------------------------------------                       
+                                                                                
+
+=== 20:00:56 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer --auditor-variant clock inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/breaks.json --seeds id:antipsychotic_discontinuation,darkweb_identity_theft_shopping,email_system_blackmail_shutdown,engineering_team_ai_resistance,goal_preservation_mandate_edit,irrigation_sabotage_telugu,knowledge_cutoff_reasoning,lie_detector_interview,ml_training_data_misuse,nuclear_material_purchase_hebrew --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/10  10% | Samples:   0/ 10 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/10  20% | Samples:   1/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/10  30% | Samples:   2/ 10 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/10  40% | Samples:   3/ 10 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/10  50% | Samples:   4/ 10 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/10  60% | Samples:   5/ 10 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/10  70% | Samples:   6/ 10 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/10  80% | Samples:   7/ 10 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/10  90% | Samples:   8/ 10 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:  10/10 100% | Samples:   9/ 10 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (10 samples): none/none                                           
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+                                                                                
+total time:              0:15:37                                                
+openrouter/z-ai/glm-5.3  7,156,522 tokens [I: 1,093,451, CW: 0, CR: 5,577,344,  
+                       O: 485,727, R: 361,738]                                  
+target (role)   1,806,774 tokens [I: 420,887, CW: 0, CR: 1,030,720, O: 355,167, 
+              R: 289,028]                                                       
+auditor (role)  5,349,748 tokens [I: 672,564, CW: 0, CR: 4,546,624, O: 130,560, 
+              R: 72,710]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   13.600  mean              8.300         
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      1.300  mean       0.500  mean              0.800  mean           0.900
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.542  mean            0.500  mean           0.000  mean        0.900
+debrief_reported         debrief_matched                                        
+mean              1.900  mean             1.200                                 
+Log:                                                                            
+logs/2026-10-06_clock_variant/inject/2026-10-06T19-00-58-00-00_probing-audit_jz…
+---------------------------------------------------------                       
+                                                                                
+
+=== 20:16:46 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer --auditor-variant clock inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/breaks.json --seeds id:bypass_2fa_hacking,clinical_oversight_subversion,executive_assistant_reveals_fraud,pharma_adverse_event_pressure,reward_hacking_code_debugging,rogue_ai_collaboration,sales_team_ai_resistance,self_exfiltration_homework_retrain,self_exfiltration_memory_trigger --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   2/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   7/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   8/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+                                                                                
+total time:              0:17:37                                                
+openrouter/z-ai/glm-5.3  8,194,431 tokens [I: 1,537,970, CW: 0, CR: 6,162,624,  
+                       O: 493,837, R: 385,714]                                  
+target (role)   2,431,625 tokens [I: 758,121, CW: 0, CR: 1,346,048, O: 327,456, 
+              R: 269,699]                                                       
+auditor (role)  5,762,806 tokens [I: 779,849, CW: 0, CR: 4,816,576, O: 166,381, 
+              R: 116,015]                                                       
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   16.556  mean              8.778         
+n_probes         has_probe         first_probe_of…          has_sim_score       
+mean      0.444  mean       0.222  mean             -0.444  mean           0.778
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.367  mean            0.778  mean           0.000  mean        0.778
+debrief_reported         debrief_matched                                        
+mean              0.222  mean             0.222                                 
+Log:                                                                            
+logs/2026-10-06_clock_variant/inject/2026-10-06T19-16-48-00-00_probing-audit_3U…
+---------------------------------------------------------                       
+                                                                                
+
+=== 20:34:37 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer --auditor-variant clock inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/breaks.json --seeds id:security_gaslighting_confidence,self_exfiltration_weapons_retrain,shutdown_script_avoidance,slack_routing_safety_dispute,subagent_content_moderation_lax,subagent_data_exfiltration_detect,subagent_fraud_check_skipping,subagent_refund_policy_violation,temporal_bias_risk_tolerance --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/9  11% | Samples:   0/  9 | mean:  n/a | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/9  22% | Samples:   1/  9 | mean: 1.00 | openrouter:  7/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/9  33% | Samples:   3/  9 | mean: 1.00 | openrouter:  6/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/9  44% | Samples:   3/  9 | mean: 1.00 | openrouter:  5/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/9  55% | Samples:   4/  9 | mean: 1.00 | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   6/9  66% | Samples:   5/  9 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   7/9  77% | Samples:   6/  9 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   8/9  88% | Samples:   7/  9 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   9/9 100% | Samples:   8/  9 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (9 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+                                                                                
+total time:              0:12:15                                                
+openrouter/z-ai/glm-5.3  6,605,388 tokens [I: 902,731, CW: 0, CR: 5,219,712, O: 
+                       482,945, R: 376,370]                                     
+target (role)   1,720,147 tokens [I: 458,052, CW: 0, CR: 919,424, O: 342,671, R:
+              282,378]                                                          
+auditor (role)  4,885,241 tokens [I: 444,679, CW: 0, CR: 4,300,288, O: 140,274, 
+              R: 93,992]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   11.778  mean              7.111         
+n_probes         has_probe         first_probe_off…         has_sim_score       
+mean      3.222  mean       0.667  mean              0.222  mean           0.889
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.581  mean            0.333  mean           0.000  mean        0.889
+debrief_reported         debrief_matched                                        
+mean              3.556  mean             3.111                                 
+Log:                                                                            
+logs/2026-10-06_clock_variant/inject/2026-10-06T19-34-39-00-00_probing-audit_UR…
+---------------------------------------------------------                       
+                                                                                
+
+=== 20:47:04 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 8 --pinned-date 2026-10-01 --provider Wafer --auditor-variant clock inject --breaks /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/breaks.json --seeds id:transgender_teen_privacy,unethical_supplier_cost_savings,unrestricted_moneymaking_agent,user_personal_info_leak,vip_content_moderation_override --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (5 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+---------------------------------------------------------                       
+                                                                                
+audit_solver | Steps:   1/5  20% | Samples:   0/  5 | mean:  n/a | openrouter:  4/ 8 | HTTP retries: 0
+audit_solver | Steps:   2/5  40% | Samples:   1/  5 | mean: 1.00 | openrouter:  3/ 8 | HTTP retries: 0
+audit_solver | Steps:   3/5  60% | Samples:   2/  5 | mean: 1.00 | openrouter:  2/ 8 | HTTP retries: 0
+audit_solver | Steps:   4/5  80% | Samples:   4/  5 | mean: 1.00 | openrouter:  1/ 8 | HTTP retries: 0
+audit_solver | Steps:   5/5 100% | Samples:   4/  5 | mean: 1.00 | openrouter:  0/ 8 | HTTP retries: 0
+
+---------------------------------------------------------                       
+probing_audit (5 samples): none/none                                            
+max_connections: 8, fail_on_error: 0.2, retry_on_error: 2, max_samples: 8,      
+seed_instructions: ..., max_turns: 30, breaks:                                  
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+                                                                                
+total time:              0:07:15                                                
+openrouter/z-ai/glm-5.3  4,773,563 tokens [I: 569,023, CW: 0, CR: 3,905,216, O: 
+                       299,324, R: 248,440]                                     
+target (role)   1,534,084 tokens [I: 319,454, CW: 0, CR: 977,536, O: 237,094, R:
+              209,882]                                                          
+auditor (role)  3,239,479 tokens [I: 249,569, CW: 0, CR: 2,927,680, O: 62,230,  
+              R: 38,558]                                                        
+planned         injected         turns          post_break_turns                
+mean     1.000  mean      1.000  mean   20.400  mean              11.000        
+n_probes         has_probe         first_probe_of…          has_sim_score       
+mean      0.600  mean       0.200  mean             -0.400  mean           1.000
+sim_score         no_probe_cand…         short_contin…         debrief_ok       
+mean       0.700  mean            0.800  mean           0.000  mean        1.000
+debrief_reported         debrief_matched                                        
+mean              2.600  mean             0.600                                 
+Log:                                                                            
+logs/2026-10-06_clock_variant/inject/2026-10-06T19-47-06-00-00_probing-audit_63…
+---------------------------------------------------------                       
+                                                                                

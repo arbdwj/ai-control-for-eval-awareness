@@ -1,0 +1,47 @@
+19:36:34 stage 1 start: 45 seeds x 1 epochs
+19:38:34 stage 3 pass over 3 new rows
+19:40:36 stage 3 pass over 3 new rows
+19:41:50 stage 3 pass over 6 new rows
+19:42:52 stage 3 pass over 3 new rows
+19:45:12 stage 3 pass over 6 new rows
+19:46:42 stage 3 pass over 6 new rows
+19:48:31 stage 3 pass over 9 new rows
+19:48:34 stage 2 batch 1: 9 seeds
+19:50:30 stage 3 pass over 9 new rows
+19:52:44 stage 3 pass over 9 new rows
+19:54:04 stage 3 pass over 6 new rows
+19:55:10 stage 3 pass over 9 new rows
+19:59:08 stage 3 pass over 15 new rows
+20:00:56 stage 2 batch 1 end rc=0
+20:00:56 stage 2 batch 2: 10 seeds
+20:02:21 stage 3 pass over 12 new rows
+20:07:34 stage 3 pass over 12 new rows
+20:10:22 stage 3 pass over 15 new rows
+20:13:49 stage 3 pass over 15 new rows
+20:16:26 stage 3 pass over 9 new rows
+20:16:45 stage 2 batch 2 end rc=0
+20:16:46 stage 2 batch 3: 9 seeds
+20:17:56 stage 3 pass over 9 new rows
+20:21:05 stage 3 pass over 18 new rows
+20:23:55 stage 3 pass over 6 new rows
+20:25:02 stage 3 pass over 6 new rows
+20:26:00 stage 3 pass over 6 new rows
+20:28:30 stage 3 pass over 9 new rows
+20:33:07 stage 3 pass over 3 new rows
+20:34:36 stage 2 batch 3 end rc=0
+20:34:37 stage 2 batch 4: 9 seeds
+20:35:09 stage 3 pass over 6 new rows
+20:35:33 stage 1 end rc=0
+20:37:24 stage 3 pass over 9 new rows
+20:40:16 stage 3 pass over 6 new rows
+20:42:19 stage 3 pass over 3 new rows
+20:45:20 stage 3 pass over 3 new rows
+20:47:04 stage 2 batch 4 end rc=0
+20:47:04 stage 2 batch 5: 5 seeds
+20:48:55 stage 3 pass over 6 new rows
+20:52:27 stage 3 pass over 3 new rows
+20:53:08 stage 3 pass over 3 new rows
+20:54:17 stage 3 pass over 6 new rows
+20:54:26 stage 2 batch 5 end rc=0
+20:54:26 stage 2 end
+20:56:47 stage 3 end; pipeline finished

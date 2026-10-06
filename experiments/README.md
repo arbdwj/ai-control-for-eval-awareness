@@ -10,5 +10,6 @@ One folder per run. Each holds what is small enough to commit: `NOTES.md` (what 
 | `2026-10-04_pilot3c_debrief_1seed` | 1 seed, debrief design | debrief parses and matches turns; tag-free transcripts |
 | `2026-10-04_pipeline_validation_2seeds` | pipeline smoke test | stage 2 overlaps stage 1 |
 | `2026-10-04_full_glm53_rollout1` | 173 seeds, 1 rollout | trace AUROC 0.98 with reasoning vs 0.71 actions-only |
+| `2026-10-06_clock_variant` | 45 timing-cited seeds, clock-equipped auditor, both arms | timing cited in debriefs 86% to 53%; sim_score mean 0.81 to 0.75, median unchanged |
 
 To reproduce an evaluation: `python -m probing_control.evaluate --logs logs/<name>/base logs/<name>/inject --monitor experiments/<name>/monitor.jsonl --breaks experiments/<name>/breaks.json`.

@@ -1,0 +1,131 @@
+
+=== 19:38:34 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+3 monitor calls to make; 0 rows already present, skipped
+
+=== 19:40:36 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+3 monitor calls to make; 3 rows already present, skipped
+
+=== 19:41:50 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+6 monitor calls to make; 6 rows already present, skipped
+
+=== 19:42:52 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+3 monitor calls to make; 12 rows already present, skipped
+
+=== 19:45:12 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+6 monitor calls to make; 15 rows already present, skipped
+
+=== 19:46:42 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+6 monitor calls to make; 21 rows already present, skipped
+
+=== 19:48:31 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+9 monitor calls to make; 27 rows already present, skipped
+
+=== 19:50:30 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+9 monitor calls to make; 36 rows already present, skipped
+
+=== 19:52:44 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+9 monitor calls to make; 45 rows already present, skipped
+
+=== 19:54:04 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+15 monitor calls to make; 54 rows already present, skipped
+
+=== 19:55:10 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+9 monitor calls to make; 69 rows already present, skipped
+
+=== 19:59:08 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+15 monitor calls to make; 78 rows already present, skipped
+
+=== 20:02:21 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+12 monitor calls to make; 93 rows already present, skipped
+
+=== 20:07:34 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 0 rows without a result
+12 monitor calls to make; 105 rows already present, skipped
+
+=== 20:10:22 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+16 monitor calls to make; 116 rows already present, skipped
+
+=== 20:13:49 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+16 monitor calls to make; 131 rows already present, skipped
+
+=== 20:16:26 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+10 monitor calls to make; 146 rows already present, skipped
+
+=== 20:17:56 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+10 monitor calls to make; 155 rows already present, skipped
+
+=== 20:21:05 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+19 monitor calls to make; 164 rows already present, skipped
+
+=== 20:23:55 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+7 monitor calls to make; 182 rows already present, skipped
+
+=== 20:25:02 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+7 monitor calls to make; 188 rows already present, skipped
+
+=== 20:26:00 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+7 monitor calls to make; 194 rows already present, skipped
+
+=== 20:28:30 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+10 monitor calls to make; 200 rows already present, skipped
+
+=== 20:33:07 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+4 monitor calls to make; 209 rows already present, skipped
+
+=== 20:35:09 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+7 monitor calls to make; 212 rows already present, skipped
+
+=== 20:37:24 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+10 monitor calls to make; 218 rows already present, skipped
+
+=== 20:40:16 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+7 monitor calls to make; 227 rows already present, skipped
+
+=== 20:42:19 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+4 monitor calls to make; 233 rows already present, skipped
+
+=== 20:45:20 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+4 monitor calls to make; 236 rows already present, skipped
+
+=== 20:48:55 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+7 monitor calls to make; 239 rows already present, skipped
+
+=== 20:52:27 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+4 monitor calls to make; 245 rows already present, skipped
+
+=== 20:53:08 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+4 monitor calls to make; 248 rows already present, skipped
+
+=== 20:54:17 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/base /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-06_clock_variant/inject --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-06_clock_variant/monitor.jsonl --max-connections 16 --redo-failed --provider Wafer
+dropped 1 rows without a result
+10 monitor calls to make; 251 rows already present, skipped

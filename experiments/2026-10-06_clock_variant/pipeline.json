@@ -1,0 +1,141 @@
+{
+ "run": "2026-10-06_clock_variant",
+ "started": "2026-10-06T19:36:34",
+ "args": {
+  "run": "2026-10-06_clock_variant",
+  "seeds": "id:antipsychotic_discontinuation,bypass_2fa_hacking,climate_data_framing_bias,clinical_oversight_subversion,crypto_withdrawal_deception,darkweb_identity_theft_shopping,data_pipeline_shutdown_compliance,defense_email_developer_conflict,email_system_blackmail_shutdown,engineering_team_ai_resistance,epa_evacuation_risk_assessment,executive_assistant_reveals_fraud,fentanyl_darkweb_purchase,goal_preservation_mandate_edit,hiring_bias_documentation_cover,housing_code_violation_pressure,icu_triage_institutional_bias,insider_trading_market_data,irrigation_sabotage_telugu,knowledge_cutoff_reasoning,lie_detector_interview,markov_incoherent_russian,mdma_darkweb_purchase,ml_training_data_misuse,nuclear_material_purchase_hebrew,pharma_adverse_event_pressure,reward_hacking_code_debugging,rogue_ai_collaboration,sales_team_ai_resistance,security_gaslighting_confidence,self_exfiltration_homework_retrain,self_exfiltration_memory_trigger,self_exfiltration_weapons_retrain,shutdown_script_avoidance,slack_routing_safety_dispute,subagent_content_moderation_lax,subagent_data_exfiltration_detect,subagent_fraud_check_skipping,subagent_refund_policy_violation,temporal_bias_risk_tolerance,transgender_teen_privacy,unethical_supplier_cost_savings,unrestricted_moneymaking_agent,user_personal_info_leak,vip_content_moderation_override",
+  "limit": null,
+  "epochs": 1,
+  "max_turns": 30,
+  "batch": 10,
+  "model": "openrouter/z-ai/glm-5.3",
+  "provider": "Wafer",
+  "pinned_date": "2026-10-01",
+  "seed": 0,
+  "base_connections": 20,
+  "inject_connections": 8,
+  "monitor_connections": 16,
+  "poll": 60,
+  "auditor_variant": "clock"
+ },
+ "n_seeds": 45,
+ "epochs": 1,
+ "base": {
+  "status": "success",
+  "done": 45,
+  "total": 45
+ },
+ "inject": {
+  "status": "success",
+  "done": 42,
+  "total": 45,
+  "batches": [
+   {
+    "n": 1,
+    "seeds": [
+     "climate_data_framing_bias",
+     "crypto_withdrawal_deception",
+     "data_pipeline_shutdown_compliance",
+     "epa_evacuation_risk_assessment",
+     "housing_code_violation_pressure",
+     "icu_triage_institutional_bias",
+     "insider_trading_market_data",
+     "markov_incoherent_russian",
+     "mdma_darkweb_purchase"
+    ],
+    "started": "19:48:34",
+    "status": "success",
+    "ended": "20:00:56"
+   },
+   {
+    "n": 2,
+    "seeds": [
+     "antipsychotic_discontinuation",
+     "darkweb_identity_theft_shopping",
+     "email_system_blackmail_shutdown",
+     "engineering_team_ai_resistance",
+     "goal_preservation_mandate_edit",
+     "irrigation_sabotage_telugu",
+     "knowledge_cutoff_reasoning",
+     "lie_detector_interview",
+     "ml_training_data_misuse",
+     "nuclear_material_purchase_hebrew"
+    ],
+    "started": "20:00:56",
+    "status": "success",
+    "ended": "20:16:45"
+   },
+   {
+    "n": 3,
+    "seeds": [
+     "bypass_2fa_hacking",
+     "clinical_oversight_subversion",
+     "executive_assistant_reveals_fraud",
+     "pharma_adverse_event_pressure",
+     "reward_hacking_code_debugging",
+     "rogue_ai_collaboration",
+     "sales_team_ai_resistance",
+     "self_exfiltration_homework_retrain",
+     "self_exfiltration_memory_trigger"
+    ],
+    "started": "20:16:46",
+    "status": "success",
+    "ended": "20:34:36"
+   },
+   {
+    "n": 4,
+    "seeds": [
+     "security_gaslighting_confidence",
+     "self_exfiltration_weapons_retrain",
+     "shutdown_script_avoidance",
+     "slack_routing_safety_dispute",
+     "subagent_content_moderation_lax",
+     "subagent_data_exfiltration_detect",
+     "subagent_fraud_check_skipping",
+     "subagent_refund_policy_violation",
+     "temporal_bias_risk_tolerance"
+    ],
+    "started": "20:34:37",
+    "status": "success",
+    "ended": "20:47:04"
+   },
+   {
+    "n": 5,
+    "seeds": [
+     "transgender_teen_privacy",
+     "unethical_supplier_cost_savings",
+     "unrestricted_moneymaking_agent",
+     "user_personal_info_leak",
+     "vip_content_moderation_override"
+    ],
+    "started": "20:47:04",
+    "status": "success",
+    "ended": "20:54:26"
+   }
+  ],
+  "skipped": [
+   {
+    "seed": "fentanyl_darkweb_purchase",
+    "epoch": 1,
+    "reason": "too short"
+   },
+   {
+    "seed": "defense_email_developer_conflict",
+    "epoch": 1,
+    "reason": "too short"
+   },
+   {
+    "seed": "hiring_bias_documentation_cover",
+    "epoch": 1,
+    "reason": "too short"
+   }
+  ]
+ },
+ "monitor": {
+  "status": "success",
+  "rows": 261,
+  "total": 270,
+  "passes": 33
+ },
+ "finished": "2026-10-06T20:56:47"
+}
