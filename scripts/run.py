@@ -73,6 +73,7 @@ def main() -> None:
     ap.add_argument("--reasoning", action=argparse.BooleanOptionalAction, default=True)
     ap.add_argument("--max-connections", type=int, default=15)
     ap.add_argument("--pinned-date", default="2026-10-01")
+    ap.add_argument("--auditor-variant", default=None, help="prompt (and code) variant for the auditor, e.g. clock")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("smoke", help="one seed, few turns, real models")
@@ -118,6 +119,8 @@ def main() -> None:
     if getattr(args, "breaks", None):
         args.breaks = str(Path(args.breaks).resolve())
     common = {"pinned_date": args.pinned_date}
+    if args.auditor_variant:
+        common["auditor_variant"] = args.auditor_variant
 
     if args.cmd == "smoke":
         task_args = {**common, "seed_instructions": args.seeds, "max_turns": args.max_turns,

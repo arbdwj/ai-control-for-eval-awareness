@@ -40,8 +40,12 @@ from inspect_petri import (  # noqa: E402
 )
 from inspect_petri._auditor.agent import AUDITOR_SYSTEM_MESSAGE  # noqa: E402
 
+from probing_control.clock import clock_policies, clock_tools  # noqa: E402
 from probing_control.driver import BREAK_TURN_KEY, probing_target  # noqa: E402
 from probing_control.scorer import probing_scorer  # noqa: E402
+
+# auditor variants that bring code as well as prompt text: name -> (extra tools, approval policies)
+VARIANT_HOOKS = {"clock": (clock_tools, clock_policies)}
 
 logger = logging.getLogger(__name__)
 
@@ -195,14 +199,20 @@ def probing_audit(
     if breaks is not None:
         setup.append(break_setup(load_breaks(breaks)))
 
+    extra_tools, policies = [], None
+    if auditor_variant in VARIANT_HOOKS:
+        tools_fn, policies_fn = VARIANT_HOOKS[auditor_variant]
+        extra_tools, policies = tools_fn(), policies_fn()
+
     solver = setup + [
         audit_solver(
             auditor=auditor_agent(
                 max_turns=max_turns,
                 turn_counter=turn_counter,
                 compaction=compaction,
-                tools=auditor_tools(rollback=enable_rollback, target_tools=target_tools),
+                tools=auditor_tools(rollback=enable_rollback, target_tools=target_tools, extra_tools=extra_tools),
                 system_message=pinned_auditor_prompt(pinned_date, auditor_variant),
+                approval=policies,
                 cache=cache_policy,
                 target_display_name=target_display_name,
                 generate=deterministic_generate,

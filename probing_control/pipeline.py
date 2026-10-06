@@ -93,6 +93,8 @@ class Pipeline:
         cmd = [PY, str(ROOT / "scripts" / "run.py"), "--max-connections", str(conns), "--pinned-date", self.a.pinned_date]
         if self.a.provider:
             cmd += ["--provider", self.a.provider]
+        if self.a.auditor_variant:
+            cmd += ["--auditor-variant", self.a.auditor_variant]
         return cmd
 
     def run_cmd(self, cmd: list[str], out: Path) -> int:
@@ -280,6 +282,7 @@ def main() -> None:
     ap.add_argument("--inject-connections", type=int, default=8)
     ap.add_argument("--monitor-connections", type=int, default=6)
     ap.add_argument("--poll", type=int, default=60, help="seconds between checks")
+    ap.add_argument("--auditor-variant", default=None, help="auditor variant for both stages, e.g. clock")
     a = ap.parse_args()
     os.setpgrp()  # so the dashboard can stop the whole tree
     Pipeline(a).run()
