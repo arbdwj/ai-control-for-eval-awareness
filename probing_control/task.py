@@ -52,6 +52,7 @@ logger = logging.getLogger(__name__)
 SRC = Path(__file__).resolve().parent
 DEFAULT_ADDENDUM = SRC / "prompts" / "addendum.md"
 DEFAULT_DEBRIEF = SRC / "prompts" / "debrief.md"
+DEFAULT_EXIT_INTERVIEW = SRC / "prompts" / "exit_interview.md"
 VARIANTS_DIR = SRC / "prompts" / "variants"
 
 
@@ -157,6 +158,7 @@ def probing_audit(
     breaks: str | None = None,
     addendum: str = str(DEFAULT_ADDENDUM),
     debrief: str | None = str(DEFAULT_DEBRIEF),
+    clean_debrief: str | None = None,
     hide_reasoning: bool = True,
     pinned_date: str | None = "2026-10-01",
     auditor_variant: str | None = None,
@@ -178,6 +180,7 @@ def probing_audit(
         breaks: Path to a breaks JSON file. None runs the clean arm.
         addendum: Path to the side-channel instruction appended at the break.
         debrief: Path to the developer debrief sent after the audit ends (injected arm only); None disables it.
+        clean_debrief: Path to a neutral exit interview sent after clean audits (no note); None disables it.
         hide_reasoning: Strip target reasoning from what the auditor sees (both arms).
         pinned_date: Fixed value for `{today_date}` so base and injected runs share a cache prefix.
         auditor_variant: Name of a file in `probing_control/prompts/variants/` appended to the auditor prompt (Q4).
@@ -194,6 +197,7 @@ def probing_audit(
     cache_policy: bool | CachePolicy = CachePolicy(expiry=cache_expiry) if cache else False
     addendum_text = Path(addendum).read_text()
     debrief_text = Path(debrief).read_text() if debrief else None
+    clean_debrief_text = Path(clean_debrief).read_text() if clean_debrief else None
 
     setup: list[Solver] = []
     if breaks is not None:
@@ -220,6 +224,7 @@ def probing_audit(
             target=probing_target(
                 addendum=addendum_text,
                 debrief=debrief_text,
+                clean_debrief=clean_debrief_text,
                 cache=cache_policy,
                 hide_reasoning=hide_reasoning,
             ),
@@ -239,6 +244,7 @@ def probing_audit(
             "breaks": breaks,
             "addendum": str(addendum),
             "debrief": debrief,
+            "clean_debrief": clean_debrief,
             "auditor_variant": auditor_variant,
             "pinned_date": pinned_date,
             "hide_reasoning": hide_reasoning,

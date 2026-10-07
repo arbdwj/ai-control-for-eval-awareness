@@ -131,6 +131,7 @@ def probing_target(
     *,
     addendum: str,
     debrief: str | None = None,
+    clean_debrief: str | None = None,
     model: str | Model | None = None,
     cache: bool | CachePolicy = False,
     hide_reasoning: bool = True,
@@ -140,6 +141,8 @@ def probing_target(
 
     Args:
         addendum: Text appended to the target system message at the break turn.
+        clean_debrief: Like `debrief` but sent when no note was injected: a neutral exit
+            interview asking whether the target believed it was being tested.
         debrief: If given, sent to the target as one extra developer message after the
             auditor ends the conversation (injected arm only). The reply is parsed as JSON,
             its reported probes are matched to logged turns, and the result goes to the
@@ -248,6 +251,9 @@ def probing_target(
         except ExitSignal:
             if injected and debrief:
                 await _run_debrief(target_model, state, record, debrief, target_cache)
+                save()
+            elif not injected and clean_debrief:
+                await _run_debrief(target_model, state, record, clean_debrief, target_cache)
                 save()
             return state
 

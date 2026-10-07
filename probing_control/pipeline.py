@@ -95,6 +95,8 @@ class Pipeline:
             cmd += ["--provider", self.a.provider]
         if self.a.auditor_variant:
             cmd += ["--auditor-variant", self.a.auditor_variant]
+        if self.a.clean_debrief:
+            cmd += ["--clean-debrief", self.a.clean_debrief]
         return cmd
 
     def run_cmd(self, cmd: list[str], out: Path) -> int:
@@ -109,7 +111,7 @@ class Pipeline:
         self.state["base"]["status"] = "running"
         self.save()
         cmd = self.common(self.a.base_connections) + [
-            "base", "--seeds", "id:" + ",".join(self.seed_ids), "--epochs", str(self.a.epochs),
+            "base", "--seeds", self.a.seeds, "--sample-ids", ",".join(self.seed_ids), "--epochs", str(self.a.epochs),
             "--max-turns", str(self.a.max_turns), "--log-dir", str(self.base_dir),
         ]
         self.log(f"stage 1 start: {len(self.seed_ids)} seeds x {self.a.epochs} epochs")
@@ -188,7 +190,7 @@ class Pipeline:
                     self.save()
                     self.log(f"stage 2 batch {n}: {len(usable)} seeds")
                     cmd = self.common(self.a.inject_connections) + [
-                        "inject", "--breaks", str(self.breaks_path), "--seeds", "id:" + ",".join(usable),
+                        "inject", "--breaks", str(self.breaks_path), "--seeds", self.a.seeds, "--sample-ids", ",".join(usable),
                         "--epochs", str(self.a.epochs), "--max-turns", str(self.a.max_turns),
                         "--log-dir", str(self.inject_dir),
                     ]
@@ -283,6 +285,7 @@ def main() -> None:
     ap.add_argument("--monitor-connections", type=int, default=6)
     ap.add_argument("--poll", type=int, default=60, help="seconds between checks")
     ap.add_argument("--auditor-variant", default=None, help="auditor variant for both stages, e.g. clock")
+    ap.add_argument("--clean-debrief", default=None, help="exit-interview prompt for the clean arm")
     a = ap.parse_args()
     os.setpgrp()  # so the dashboard can stop the whole tree
     Pipeline(a).run()

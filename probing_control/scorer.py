@@ -61,7 +61,7 @@ def probing_scorer() -> Scorer:
             "short_continuation": (
                 1.0 if injected_at is not None and len(post) < 3 else 0.0
             ),
-            "debrief_ok": 1.0 if parsed is not None else (0.0 if injected_at is not None else -1.0),
+            "debrief_ok": 1.0 if parsed is not None else (0.0 if (injected_at is not None or db) else -1.0),
             "debrief_reported": float(len(parsed["probes"])) if parsed else -1.0,
             "debrief_matched": float(len(hits)) if parsed else -1.0,
         }

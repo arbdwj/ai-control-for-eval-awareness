@@ -38,7 +38,7 @@ def make_model(args, max_connections: int):
     )
 
 
-def run_eval(args, *, task_args: dict, log_dir: str, epochs: int, max_connections: int):
+def run_eval(args, *, task_args: dict, log_dir: str, epochs: int, max_connections: int, sample_ids: list[str] | None = None):
     model = make_model(args, max_connections)
     roles = {"auditor": model, "target": model}
     if task_args.get("judge"):
@@ -51,6 +51,7 @@ def run_eval(args, *, task_args: dict, log_dir: str, epochs: int, max_connection
         log_dir=log_dir,
         max_connections=max_connections,
         max_samples=max_connections,
+        sample_id=sample_ids or None,
         fail_on_error=0.2,
         retry_on_error=2,
     )
@@ -74,6 +75,7 @@ def main() -> None:
     ap.add_argument("--max-connections", type=int, default=15)
     ap.add_argument("--pinned-date", default="2026-10-01")
     ap.add_argument("--auditor-variant", default=None, help="prompt (and code) variant for the auditor, e.g. clock")
+    ap.add_argument("--clean-debrief", default=None, help="path to an exit-interview prompt for clean audits")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("smoke", help="one seed, few turns, real models")
@@ -85,6 +87,7 @@ def main() -> None:
     p = sub.add_parser("base", help="clean arm")
     p.add_argument("--seeds", default="all")
     p.add_argument("--subset", default=None)
+    p.add_argument("--sample-ids", default=None, help="comma-separated sample ids to run (filters the seed set)")
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--max-turns", type=int, default=30)
     p.add_argument("--log-dir", default="logs/base")
@@ -98,6 +101,7 @@ def main() -> None:
     p.add_argument("--breaks", default="breaks.json")
     p.add_argument("--seeds", default="all")
     p.add_argument("--subset", default=None)
+    p.add_argument("--sample-ids", default=None, help="comma-separated sample ids to run (filters the seed set)")
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--max-turns", type=int, default=30)
     p.add_argument("--log-dir", default="logs/inject")
@@ -121,6 +125,8 @@ def main() -> None:
     common = {"pinned_date": args.pinned_date}
     if args.auditor_variant:
         common["auditor_variant"] = args.auditor_variant
+    if args.clean_debrief:
+        common["clean_debrief"] = str(Path(args.clean_debrief).resolve())
 
     if args.cmd == "smoke":
         task_args = {**common, "seed_instructions": args.seeds, "max_turns": args.max_turns,
@@ -128,14 +134,16 @@ def main() -> None:
         run_eval(args, task_args=task_args, log_dir=args.log_dir, epochs=1, max_connections=args.max_connections)
     elif args.cmd == "base":
         task_args = {**common, "seed_instructions": seeds_arg(args), "max_turns": args.max_turns}
-        run_eval(args, task_args=task_args, log_dir=args.log_dir, epochs=args.epochs, max_connections=args.max_connections)
+        ids = args.sample_ids.split(",") if args.sample_ids else None
+        run_eval(args, task_args=task_args, log_dir=args.log_dir, epochs=args.epochs, max_connections=args.max_connections, sample_ids=ids)
     elif args.cmd == "breaks":
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)
         cmd = [sys.executable, "-m", "probing_control.breaks", "--logs", *args.logs, "--out", args.out, "--seed", str(args.seed)]
         sys.exit(subprocess.call(cmd, cwd=ROOT))
     elif args.cmd == "inject":
         task_args = {**common, "seed_instructions": seeds_arg(args), "max_turns": args.max_turns, "breaks": args.breaks}
-        run_eval(args, task_args=task_args, log_dir=args.log_dir, epochs=args.epochs, max_connections=args.max_connections)
+        ids = args.sample_ids.split(",") if args.sample_ids else None
+        run_eval(args, task_args=task_args, log_dir=args.log_dir, epochs=args.epochs, max_connections=args.max_connections, sample_ids=ids)
     elif args.cmd == "variants":
         task_args = {**common, "seed_instructions": seeds_arg(args), "max_turns": args.max_turns,
                      "breaks": args.breaks, "auditor_variant": args.variant}
