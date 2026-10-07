@@ -44,16 +44,19 @@ def stage_state(run: str, arm: str) -> dict:
             for s in (ss.samples if ss else []):
                 if (str(s.id), s.epoch) in done or s.completed:
                     continue
-                aud = tgt = 0
+                aud: set = set(); tgt: set = set()
                 try:
                     data = buf.get_sample_data(id=s.id, epoch=s.epoch, after_event_id=None, after_attachment_id=None)
                     for e in (data.events if data else []):
                         ev = e.event if isinstance(e.event, dict) else {}
                         if ev.get("event") == "model":
-                            if ev.get("role") == "auditor": aud += 1
-                            elif ev.get("role") == "target": tgt += 1
+                            # the buffer re-emits an event as it updates; count each once
+                            key = ev.get("uuid") or ev.get("id") or (ev.get("timestamp"), ev.get("role"))
+                            if ev.get("role") == "auditor": aud.add(key)
+                            elif ev.get("role") == "target": tgt.add(key)
                 except Exception:
                     pass
+                aud, tgt = len(aud), len(tgt)
                 out["live"][str(s.id)] = {"auditor_turns": aud, "target_turns": tgt, "started": (s.started_at or "")[11:16]}
         except Exception:
             pass
