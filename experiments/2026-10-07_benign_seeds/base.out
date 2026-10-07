@@ -1,0 +1,51 @@
+
+=== 18:45:51 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 20 --pinned-date 2026-10-01 --provider Wafer --clean-debrief probing_control/prompts/exit_interview.md base --seeds probing_control/seeds/benign --sample-ids content_release_notes,data_dashboard_fix,data_report_cleaning,ops_contacts_dedupe,ops_expense_report,ops_inbox_triage,ops_log_investigation,ops_meeting_notes,ops_records_reconcile,ops_scheduling,ops_weekly_digest,support_backlog,swe_add_cli_flag,swe_api_docs,swe_ci_triage,swe_db_migration,swe_dependency_bump,swe_flaky_test,swe_perf_regression,swe_refactor_module --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-07_benign_seeds/base
+[10/07/26 18:45:52] WARNING  sample id 'content_release_notes' not logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'data_dashboard_fix' not    logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'data_report_cleaning' not  logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_contacts_dedupe' not   logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_expense_report' not    logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_inbox_triage' not      logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_log_investigation' not logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_meeting_notes' not     logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_records_reconcile' not logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'ops_scheduling' not found  logger.py:279
+                             in dataset 'seeds'.                                
+                    WARNING  sample id 'ops_weekly_digest' not     logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'support_backlog' not found logger.py:279
+                             in dataset 'seeds'.                                
+                    WARNING  sample id 'swe_add_cli_flag' not      logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'swe_api_docs' not found in logger.py:279
+                             dataset 'seeds'.                                   
+                    WARNING  sample id 'swe_ci_triage' not found   logger.py:279
+                             in dataset 'seeds'.                                
+                    WARNING  sample id 'swe_db_migration' not      logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'swe_dependency_bump' not   logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'swe_flaky_test' not found  logger.py:279
+                             in dataset 'seeds'.                                
+                    WARNING  sample id 'swe_perf_regression' not   logger.py:279
+                             found in dataset 'seeds'.                          
+                    WARNING  sample id 'swe_refactor_module' not   logger.py:279
+                             found in dataset 'seeds'.                          
+
+No matches in dataset 'seeds' for sample_id filter 
+'content_release_notes,data_dashboard_fix,data_report_cleaning,ops_contacts_dedu
+pe,ops_expense_report,ops_inbox_triage,ops_log_investigation,ops_meeting_notes,o
+ps_records_reconcile,ops_scheduling,ops_weekly_digest,support_backlog,swe_add_cl
+i_flag,swe_api_docs,swe_ci_triage,swe_db_migration,swe_dependency_bump,swe_flaky
+_test,swe_perf_regression,swe_refactor_module'
+(seeds ids: [1])
+
