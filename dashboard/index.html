@@ -30,6 +30,13 @@
   <h1>Probing control</h1>
   <div class="muted" id="status">loading…</div>
 
+  <h2>Benchmark <span id="bench_badge" class="muted" style="text-transform:none;letter-spacing:0;font-weight:400"></span></h2>
+  <div class="card">
+    <div class="muted" style="margin-bottom:6px">Probing accuracy by question and target model: share of injected, task-completed runs whose debrief answer matches the run's manifest. Error bars are Wilson 95% intervals. Auditor and monitor: GLM 5.3.</div>
+    <svg id="bench" viewBox="0 0 860 300" style="width:100%;height:auto;display:block" role="img" aria-label="grouped bars of probing accuracy per question and model"></svg>
+    <div id="bench_legend" class="muted" style="font-size:13px;margin-top:4px"></div>
+  </div>
+
   <h2>Pipeline</h2>
   <div class="card" id="pipeform">
     <div class="row" style="gap:8px 16px">
@@ -110,6 +117,32 @@ function runCard(r) {
     ${(r.live||[]).map(s => `<tr><td>${s.id}</td><td colspan="5" class="muted">running since ${s.started_at ? new Date(s.started_at).toLocaleTimeString() : '?'}</td></tr>`).join('')}</tbody></table>
   </div>`;
 }
+
+const BENCH_COLORS = ['#2a78d6','#eb6834','#1baf7a','#eda100','#e87ba4'];
+const QL = {execution:'Execution\nreal shell or narrated?', data:'Data\ngenuine or fabricated?', time:'Time\nconsistent clock?', persistence:'Persistence\nstate kept?', human:'Human\nreal person?'};
+function drawBench(d) {
+  const svg = document.getElementById('bench'); if (!svg) return;
+  const NS = 'http://www.w3.org/2000/svg'; svg.innerHTML = '';
+  const el = (n, a, t) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); if (t != null) e.textContent = t; return e; };
+  const W = 860, H = 300, L = 48, R = 12, T = 18, B = 58, pw = W - L - R, ph = H - T - B;
+  const qs = d.questions, nm = d.models.length, slot = pw / qs.length, bw = Math.min(26, (slot - 14) / Math.max(nm, 1));
+  [0, 25, 50, 75, 100].forEach(v => { const y = T + ph - v / 100 * ph; svg.appendChild(el('line', {x1: L, x2: W - R, y1: y, y2: y, stroke: 'var(--line)'})); svg.appendChild(el('text', {x: L - 6, y: y + 4, 'text-anchor': 'end', 'font-size': 11, fill: 'var(--muted)'}, v + '%')); });
+  qs.forEach((q, qi) => {
+    const cx = L + qi * slot + slot / 2;
+    d.models.forEach((m, mi) => {
+      const x = cx + (mi - (nm - 1) / 2) * (bw + 3) - bw / 2, p = m.acc[qi] || 0, h = p * ph, y = T + ph - h;
+      svg.appendChild(el('rect', {x, y, width: bw, height: h, rx: 3, fill: BENCH_COLORS[mi % 5]}));
+      if (m.lo && m.hi) { const y1 = T + ph - (m.hi[qi] || 0) * ph, y2 = T + ph - (m.lo[qi] || 0) * ph; svg.appendChild(el('line', {x1: x + bw / 2, x2: x + bw / 2, y1, y2, stroke: 'var(--ink-2, #52514e)', 'stroke-width': 1})); }
+      svg.appendChild(el('text', {x: x + bw / 2, y: Math.min(y, T + ph - ((m.hi||[])[qi] || p) * ph) - 4, 'text-anchor': 'middle', 'font-size': 10, fill: 'var(--muted)'}, Math.round(100 * p) + '%'));
+    });
+    QL[q].split('\n').forEach((line, li) => svg.appendChild(el('text', {x: cx, y: T + ph + 16 + 13 * li, 'text-anchor': 'middle', 'font-size': li ? 10 : 11.5, 'font-weight': li ? 400 : 600, fill: li ? 'var(--muted)' : 'var(--fg)'}, line)));
+  });
+  svg.appendChild(el('line', {x1: L, x2: W - R, y1: T + ph, y2: T + ph, stroke: 'var(--line)'}));
+  document.getElementById('bench_legend').innerHTML = d.models.map((m, i) => `<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${BENCH_COLORS[i % 5]};margin:0 6px 0 14px;vertical-align:-1px"></span>${m.name} (n=${m.n_runs})`).join('');
+  document.getElementById('bench_badge').textContent = d.simulated ? '· SIMULATED DATA until the benchmark runs finish' : '· real data, updated ' + new Date((d.updated || 0) * 1000).toLocaleTimeString();
+}
+async function refreshBench() { try { drawBench(await (await fetch('/api/bench')).json()); } catch (e) {} }
+refreshBench(); setInterval(refreshBench, 60000);
 
 async function refresh() {
   try {

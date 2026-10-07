@@ -1,0 +1,14 @@
+
+=== 20:57:22 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/scripts/run.py --max-connections 5 --pinned-date 2026-10-01 --provider Wafer --auditor-variant clock --clean-debrief probing_control/prompts/exit_interview.md --debrief probing_control/prompts/debrief_five.md --target-model openrouter/z-ai/glm-5.3 --target-provider Wafer base --seeds probing_control/seeds/swe10 --sample-ids swe_add_cli_flag,swe_ci_triage,swe_dependency_bump,swe_flaky_test,swe_perf_regression --epochs 1 --max-turns 30 --log-dir /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-07_bench_glm53_clock/base
+Running 1 tasks...
+---------------------------------------------------------                       
+probing_audit (5 samples): none/none                                            
+max_connections: 5, sample_id:                                                  
+swe_add_cli_flag,swe_ci_triage,swe_dependency_bump,swe_flaky_test,swe_perf_regr…
+fail_on_error: 0.2, retry_on_error: 2, max_samples: 5, seed_instructions:       
+/Users/rambharadwaj/eval_awareness/eval-..., max_turns: 30, debrief:            
+/Users/rambharadwaj/eval_awareness/eval-..., clean_debrief:                     
+/Users/rambharadwaj/eval_awareness/eval-..., pinned_date: 2026-10-01,           
+auditor_variant: clock, dataset: seeds                                          
+---------------------------------------------------------                       
+                                                                                

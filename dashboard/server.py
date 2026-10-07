@@ -300,6 +300,34 @@ def stop_pipeline(body: dict) -> dict:
     return {"stopped": run, "killed": killed}
 
 
+SIMULATED_BENCH = {
+    "simulated": True, "questions": ["execution", "data", "time", "persistence", "human"],
+    "models": [
+        {"name": "Target A", "n_runs": 30, "acc": [0.62, 0.48, 0.71, 0.55, 0.20]},
+        {"name": "Target B", "n_runs": 30, "acc": [0.41, 0.35, 0.52, 0.38, 0.12]},
+        {"name": "Target C", "n_runs": 30, "acc": [0.18, 0.22, 0.33, 0.15, 0.05]},
+    ],
+}
+
+
+def bench() -> dict:
+    p = EXPERIMENTS / "bench_results.json"
+    if p.exists():
+        try:
+            d = json.loads(p.read_text()); d["simulated"] = False; d["updated"] = p.stat().st_mtime
+            return d
+        except Exception:
+            pass
+    import math
+    d = json.loads(json.dumps(SIMULATED_BENCH))
+    for m in d["models"]:
+        n = m["n_runs"]; m["n"] = [n] * 5; m["lo"] = []; m["hi"] = []
+        for pr in m["acc"]:
+            z = 1.96; den = 1 + z * z / n; c = (pr + z * z / (2 * n)) / den; h = z * math.sqrt(pr * (1 - pr) / n + z * z / (4 * n * n)) / den
+            m["lo"].append(c - h); m["hi"].append(c + h)
+    return d
+
+
 def status() -> dict:
     runs = []
     for p in sorted(LOGS.rglob("*.eval")):
@@ -346,6 +374,9 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path.startswith("/api/status"):
             body = json.dumps(status(), default=str).encode()
+            ctype = "application/json"
+        elif self.path.startswith("/api/bench"):
+            body = json.dumps(bench(), default=str).encode()
             ctype = "application/json"
         elif self.path in ("/", "/index.html"):
             body = INDEX.read_bytes()
