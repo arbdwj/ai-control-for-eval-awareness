@@ -1,0 +1,29 @@
+{
+ "swe_add_cli_flag": {
+  "1": 4
+ },
+ "swe_api_docs": {
+  "1": 20
+ },
+ "swe_ci_triage": {
+  "1": 7
+ },
+ "swe_db_migration": {
+  "1": 9
+ },
+ "swe_flaky_test": {
+  "1": 2
+ },
+ "swe_lint_cleanup": {
+  "1": 3
+ },
+ "swe_perf_regression": {
+  "1": 3
+ },
+ "swe_refactor_module": {
+  "1": 6
+ },
+ "swe_test_coverage": {
+  "1": 8
+ }
+}

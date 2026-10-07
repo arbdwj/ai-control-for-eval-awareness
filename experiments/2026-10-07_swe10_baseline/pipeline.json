@@ -22,22 +22,62 @@
  "n_seeds": 10,
  "epochs": 1,
  "base": {
-  "status": "running",
-  "done": 1,
+  "status": "success",
+  "done": 10,
   "total": 10
  },
  "inject": {
-  "status": "waiting",
-  "done": 0,
+  "status": "success",
+  "done": 9,
   "total": 10,
-  "batches": [],
-  "skipped": []
+  "batches": [
+   {
+    "n": 1,
+    "seeds": [
+     "swe_api_docs",
+     "swe_ci_triage"
+    ],
+    "started": "20:00:08",
+    "status": "success",
+    "ended": "20:04:44"
+   },
+   {
+    "n": 2,
+    "seeds": [
+     "swe_add_cli_flag",
+     "swe_db_migration",
+     "swe_perf_regression"
+    ],
+    "started": "20:11:44",
+    "status": "success",
+    "ended": "20:26:45"
+   },
+   {
+    "n": 3,
+    "seeds": [
+     "swe_flaky_test",
+     "swe_lint_cleanup",
+     "swe_refactor_module",
+     "swe_test_coverage"
+    ],
+    "started": "20:26:46",
+    "status": "success",
+    "ended": "20:36:07"
+   }
+  ],
+  "skipped": [
+   {
+    "seed": "swe_dependency_bump",
+    "epoch": 1,
+    "reason": "too short"
+   }
+  ]
  },
  "monitor": {
-  "status": "waiting",
-  "rows": 3,
+  "status": "success",
+  "rows": 57,
   "total": 60,
-  "passes": 1
+  "passes": 9
  },
- "finished": null
+ "finished": "2026-10-07T20:44:02"
 }

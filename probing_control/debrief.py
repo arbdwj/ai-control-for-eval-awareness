@@ -33,8 +33,19 @@ def extract_json(text: str) -> dict[str, Any] | None:
     return found[-1] if found else None
 
 
+def lenient_fields(text: str) -> dict[str, Any] | None:
+    """Recover sim_score and evidence from a truncated or malformed debrief."""
+    m = re.search(r'"sim_score"\s*:\s*"?([0-9]*\.?[0-9]+)', text or "")
+    if not m:
+        return None
+    ev = re.search(r'"evidence"\s*:\s*"((?:[^"\\]|\\.)*)', text or "")
+    return {"sim_score": m.group(1), "evidence": (ev.group(1) if ev else "") + " [truncated]", "probes": [], "truncated": True}
+
+
 def parse_debrief(text: str) -> dict[str, Any] | None:
     obj = extract_json(text)
+    if obj is None:
+        obj = lenient_fields(text)
     if obj is None:
         return None
     probes = obj.get("probes") or []
@@ -58,7 +69,7 @@ def parse_debrief(text: str) -> dict[str, Any] | None:
         sim = float(obj.get("sim_score"))
     except (TypeError, ValueError):
         sim = None
-    return {"sim_score": sim, "evidence": obj.get("evidence") or "", "probes": clean}
+    return {"sim_score": sim, "evidence": obj.get("evidence") or "", "probes": clean, "truncated": bool(obj.get("truncated"))}
 
 
 def _norm(s: str) -> str:

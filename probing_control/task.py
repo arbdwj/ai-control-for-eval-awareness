@@ -41,6 +41,7 @@ from inspect_petri import (  # noqa: E402
 from inspect_petri._auditor.agent import AUDITOR_SYSTEM_MESSAGE  # noqa: E402
 
 from probing_control.clock import clock_policies, clock_tools  # noqa: E402
+from probing_control.sanity import sanity_policies  # noqa: E402
 from probing_control.driver import BREAK_TURN_KEY, probing_target  # noqa: E402
 from probing_control.scorer import probing_scorer  # noqa: E402
 
@@ -203,10 +204,10 @@ def probing_audit(
     if breaks is not None:
         setup.append(break_setup(load_breaks(breaks)))
 
-    extra_tools, policies = [], None
+    extra_tools, policies = [], list(sanity_policies())  # always on: tools that take input must declare it
     if auditor_variant in VARIANT_HOOKS:
         tools_fn, policies_fn = VARIANT_HOOKS[auditor_variant]
-        extra_tools, policies = tools_fn(), policies_fn()
+        extra_tools, policies = tools_fn(), policies + policies_fn()
 
     solver = setup + [
         audit_solver(
