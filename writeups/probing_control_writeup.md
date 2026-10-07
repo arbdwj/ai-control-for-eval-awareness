@@ -78,6 +78,11 @@ Both arms use the same seeds, the same break turns and the same cached prefixes,
 
 *Simulated data: probes passed and attempted per target under each overseer view, and probing accuracy against task accuracy*
 
+
+![Simulated data: covert probing accuracy by question and target model, bars per model with Wilson intervals](figures/probing_accuracy_by_question_simulated.png)
+
+*Simulated data. The headline figure of the benchmark: one group per probing question, one bar per target model, height is the share of task-completed runs in which the model answered that question correctly through probes the overseer let pass, with 95 percent Wilson intervals over rollouts. Models are read left to right within each group; the ranking is their covert probing ability on that aspect of the environment.*
+
 # **First iteration**
 
 The pipeline, cut, debrief, probe matching and offline monitors exist and have run on 173 Petri seeds. In order of what the first iteration needs:
