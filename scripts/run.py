@@ -25,14 +25,15 @@ ROOT = Path(__file__).resolve().parent.parent
 TASK = str(ROOT / "probing_control" / "task.py@probing_audit")
 
 
-def make_model(args, max_connections: int):
+def make_model(args, max_connections: int, name: str | None = None, provider: str | None = None):
     model_args: dict = {}
     if args.reasoning:
         model_args["reasoning_enabled"] = True
-    if args.provider:
-        model_args["provider"] = {"order": [args.provider], "allow_fallbacks": False}
+    prov = provider if name else args.provider
+    if prov:
+        model_args["provider"] = {"order": [prov], "allow_fallbacks": False}
     return get_model(
-        args.model,
+        name or args.model,
         config=GenerateConfig(max_tokens=args.max_tokens, max_connections=max_connections),
         **model_args,
     )
@@ -40,7 +41,8 @@ def make_model(args, max_connections: int):
 
 def run_eval(args, *, task_args: dict, log_dir: str, epochs: int, max_connections: int, sample_ids: list[str] | None = None):
     model = make_model(args, max_connections)
-    roles = {"auditor": model, "target": model}
+    target = make_model(args, max_connections, args.target_model, args.target_provider) if args.target_model else model
+    roles = {"auditor": model, "target": target}
     if task_args.get("judge"):
         roles["judge"] = model
     return inspect_eval(
@@ -80,6 +82,9 @@ def main() -> None:
     ap.add_argument("--pinned-date", default="2026-10-01")
     ap.add_argument("--auditor-variant", default=None, help="prompt (and code) variant for the auditor, e.g. clock")
     ap.add_argument("--clean-debrief", default=None, help="path to an exit-interview prompt for clean audits")
+    ap.add_argument("--target-model", default=None, help="target model if different from --model (auditor, judge, monitor)")
+    ap.add_argument("--target-provider", default=None, help="OpenRouter upstream to pin for the target model")
+    ap.add_argument("--debrief", default=None, help="path to the injected-arm debrief prompt (default: prompts/debrief.md)")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p = sub.add_parser("smoke", help="one seed, few turns, real models")
@@ -131,6 +136,8 @@ def main() -> None:
         common["auditor_variant"] = args.auditor_variant
     if args.clean_debrief:
         common["clean_debrief"] = str(Path(args.clean_debrief).resolve())
+    if args.debrief:
+        common["debrief"] = str(Path(args.debrief).resolve())
 
     if args.cmd == "smoke":
         task_args = {**common, "seed_instructions": args.seeds, "max_turns": args.max_turns,

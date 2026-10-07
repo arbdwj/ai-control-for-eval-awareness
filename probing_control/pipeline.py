@@ -77,6 +77,9 @@ class Pipeline:
         ids = [str(s.id) for s in ds]
         if self.a.limit:
             ids = ids[: self.a.limit]
+        if self.a.only:
+            keep = {x.strip() for x in self.a.only.split(",") if x.strip()}
+            ids = [i for i in ids if i in keep]
         return ids
 
     def log(self, msg: str) -> None:
@@ -97,6 +100,12 @@ class Pipeline:
             cmd += ["--auditor-variant", self.a.auditor_variant]
         if self.a.clean_debrief:
             cmd += ["--clean-debrief", self.a.clean_debrief]
+        if self.a.debrief:
+            cmd += ["--debrief", self.a.debrief]
+        if self.a.target_model:
+            cmd += ["--target-model", self.a.target_model]
+        if self.a.target_provider:
+            cmd += ["--target-provider", self.a.target_provider]
         return cmd
 
     def run_cmd(self, cmd: list[str], out: Path) -> int:
@@ -286,6 +295,10 @@ def main() -> None:
     ap.add_argument("--poll", type=int, default=60, help="seconds between checks")
     ap.add_argument("--auditor-variant", default=None, help="auditor variant for both stages, e.g. clock")
     ap.add_argument("--clean-debrief", default=None, help="exit-interview prompt for the clean arm")
+    ap.add_argument("--debrief", default=None, help="injected-arm debrief prompt")
+    ap.add_argument("--target-model", default=None, help="target model; auditor and monitor stay on --model")
+    ap.add_argument("--target-provider", default=None)
+    ap.add_argument("--only", default=None, help="comma-separated subset of seed ids to run")
     a = ap.parse_args()
     os.setpgrp()  # so the dashboard can stop the whole tree
     Pipeline(a).run()

@@ -57,6 +57,7 @@ def parse_debrief(text: str) -> dict[str, Any] | None:
             continue
         clean.append(
             {
+                "question": (str(p.get("question")).lower() if p.get("question") else None),
                 "tool": (p.get("tool") or None),
                 "arguments": (p.get("arguments") or None),
                 "message": (p.get("message") or p.get("or_message") or None),
@@ -69,7 +70,20 @@ def parse_debrief(text: str) -> dict[str, Any] | None:
         sim = float(obj.get("sim_score"))
     except (TypeError, ValueError):
         sim = None
-    return {"sim_score": sim, "evidence": obj.get("evidence") or "", "probes": clean, "truncated": bool(obj.get("truncated"))}
+    answers = {}
+    raw_answers = obj.get("answers") or {}
+    if isinstance(raw_answers, dict):
+        for q, v in raw_answers.items():
+            if isinstance(v, dict):
+                verdict = str(v.get("verdict") or "").lower().strip()
+                try:
+                    conf = float(v.get("confidence"))
+                except (TypeError, ValueError):
+                    conf = None
+                answers[str(q).lower()] = {"verdict": verdict, "confidence": conf, "why": str(v.get("why") or "")[:300]}
+            elif isinstance(v, str):
+                answers[str(q).lower()] = {"verdict": v.lower().strip(), "confidence": None, "why": ""}
+    return {"sim_score": sim, "evidence": obj.get("evidence") or "", "probes": clean, "answers": answers, "truncated": bool(obj.get("truncated"))}
 
 
 def _norm(s: str) -> str:

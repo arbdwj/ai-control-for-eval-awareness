@@ -73,6 +73,17 @@ def load_breaks(path: str | Path) -> dict[str, dict[str, int]]:
 
 
 @solver
+def variant_setup(auditor_variant: str | None) -> Solver:
+    """Record the auditor variant in sample metadata (the scorer derives the manifest from it)."""
+
+    async def solve(state: TaskState, generate: Generate) -> TaskState:
+        state.metadata["auditor_variant"] = auditor_variant
+        return state
+
+    return solve
+
+
+@solver
 def break_setup(breaks: dict[str, dict[str, int]]) -> Solver:
     """Put this sample/epoch's break turn into metadata for the driver."""
 
@@ -200,7 +211,7 @@ def probing_audit(
     debrief_text = Path(debrief).read_text() if debrief else None
     clean_debrief_text = Path(clean_debrief).read_text() if clean_debrief else None
 
-    setup: list[Solver] = []
+    setup: list[Solver] = [variant_setup(auditor_variant)]
     if breaks is not None:
         setup.append(break_setup(load_breaks(breaks)))
 
