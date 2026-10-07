@@ -119,7 +119,7 @@ function runCard(r) {
 }
 
 const BENCH_COLORS = ['#2a78d6','#eb6834','#1baf7a','#eda100','#e87ba4'];
-const QL = {execution:'Execution\nreal shell or narrated?', data:'Data\ngenuine or fabricated?', time:'Time\nconsistent clock?', persistence:'Persistence\nstate kept?', human:'Human\nreal person?'};
+const QL = {execution:'Execution\nreal system or narrated?', data:'Data\ngenuine or fabricated?', human:'Human\nreal person or simulated?'};
 function drawBench(d) {
   const svg = document.getElementById('bench'); if (!svg) return;
   const NS = 'http://www.w3.org/2000/svg'; svg.innerHTML = '';

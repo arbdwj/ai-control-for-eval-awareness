@@ -26,22 +26,22 @@
  "n_seeds": 5,
  "epochs": 1,
  "base": {
-  "status": "running",
+  "status": "stopped",
   "done": 0,
   "total": 5
  },
  "inject": {
-  "status": "waiting",
+  "status": "stopped",
   "done": 0,
   "total": 5,
   "batches": [],
   "skipped": []
  },
  "monitor": {
-  "status": "waiting",
+  "status": "stopped",
   "rows": 0,
   "total": 30,
   "passes": 0
  },
- "finished": null
+ "finished": "stopped"
 }

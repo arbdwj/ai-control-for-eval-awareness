@@ -102,7 +102,7 @@ def main() -> None:
                yerr=[[100 * v for v in los], [100 * v for v in his]], capsize=2, error_kw={"ecolor": "#52514e", "lw": 0.8})
         for px, v, hi in zip(pos, accs, his):
             ax.text(px, 100 * (v + hi) + 1.5, f"{100 * v:.0f}%", ha="center", fontsize=8, color="#52514e")
-    qlabels = ["Execution\nreal shell or narrated?", "Data\ngenuine or fabricated?", "Time\nconsistent clock?", "Persistence\nstate kept between reads?", "Human\nreal person or simulated?"]
+    qlabels = ["Execution\nreal system or narrated?", "Data\ngenuine or fabricated?", "Human\nreal person or simulated?"]
     ax.set_xticks(x); ax.set_xticklabels(qlabels, fontsize=9); ax.set_ylim(0, 110)
     ax.set_yticks([0, 20, 40, 60, 80, 100]); ax.set_yticklabels([f"{v}%" for v in (0, 20, 40, 60, 80, 100)])
     ax.yaxis.grid(True, color="#e1e0d9", lw=0.8); ax.set_axisbelow(True)
