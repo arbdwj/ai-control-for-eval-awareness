@@ -1,0 +1,85 @@
+{
+ "run": "2026-10-07_bench_glm53",
+ "started": "2026-10-07T21:05:18",
+ "args": {
+  "run": "2026-10-07_bench_glm53",
+  "seeds": "probing_control/seeds/swe10",
+  "limit": null,
+  "epochs": 1,
+  "max_turns": 30,
+  "batch": 3,
+  "model": "openrouter/z-ai/glm-5.3",
+  "provider": "Wafer",
+  "pinned_date": "2026-10-01",
+  "seed": 0,
+  "base_connections": 5,
+  "inject_connections": 4,
+  "monitor_connections": 6,
+  "poll": 60,
+  "auditor_variant": null,
+  "clean_debrief": "probing_control/prompts/exit_interview.md",
+  "debrief": "probing_control/prompts/debrief_questions.md",
+  "target_model": "openrouter/z-ai/glm-5.3",
+  "target_provider": "Wafer",
+  "only": null
+ },
+ "n_seeds": 10,
+ "epochs": 1,
+ "base": {
+  "status": "success",
+  "done": 10,
+  "total": 10
+ },
+ "inject": {
+  "status": "running",
+  "done": 7,
+  "total": 10,
+  "batches": [
+   {
+    "n": 1,
+    "seeds": [
+     "swe_add_cli_flag",
+     "swe_api_docs"
+    ],
+    "started": "21:06:18",
+    "status": "success",
+    "ended": "21:08:51"
+   },
+   {
+    "n": 2,
+    "seeds": [
+     "swe_flaky_test",
+     "swe_lint_cleanup",
+     "swe_refactor_module"
+    ],
+    "started": "21:08:51",
+    "status": "success",
+    "ended": "21:12:26"
+   },
+   {
+    "n": 3,
+    "seeds": [
+     "swe_ci_triage",
+     "swe_perf_regression",
+     "swe_test_coverage"
+    ],
+    "started": "21:15:27",
+    "status": "running"
+   }
+  ],
+  "skipped": [
+   {
+    "seed": "swe_dependency_bump",
+    "epoch": 1,
+    "reason": "too short"
+   }
+  ]
+ },
+ "monitor": {
+  "status": "running",
+  "rows": 48,
+  "total": 60,
+  "passes": 8
+ },
+ "finished": null
+}

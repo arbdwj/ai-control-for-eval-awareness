@@ -1,0 +1,16 @@
+21:05:18 stage 1 start: 10 seeds x 1 epochs
+21:06:18 stage 3 pass over 18 new rows
+21:06:18 stage 2 batch 1: 2 seeds
+21:07:23 stage 3 pass over 6 new rows
+21:08:51 stage 2 batch 1 end rc=0
+21:08:51 stage 2 batch 2: 3 seeds
+21:09:26 stage 3 pass over 3 new rows
+21:10:29 stage 3 pass over 6 new rows
+21:12:26 stage 2 batch 2 end rc=0
+21:12:32 stage 3 pass over 6 new rows
+21:15:25 stage 3 pass over 3 new rows
+21:15:27 stage 2 batch 3: 3 seeds
+21:17:07 stage 1 end rc=0
+21:17:19 stage 3 pass over 3 new rows
+21:18:45 stage 3 pass over 3 new rows
+21:21:48 stage 3 pass over 3 new rows

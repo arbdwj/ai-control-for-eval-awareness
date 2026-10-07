@@ -1,6 +1,6 @@
 # Experiments
 
-One folder per run. Each holds what is small enough to commit: `NOTES.md` (what and why), `pipeline.json` and `pipeline.log` (pipelined runs), `breaks.json` (break turn per seed and rollout), `monitor.jsonl` (one row per transcript and monitor view), `summary.json` and `evaluate.md` (from `probing_control.evaluate`), and the stage outputs. Transcripts (`.eval`) live under `logs/<same name>/` and are not committed; the `log` field in `monitor.jsonl` rows is the path at the time of the run.
+One folder per run. Each holds what is small enough to commit: `NOTES.md` (what and why), `pipeline.json` and `pipeline.log` (pipelined runs), `breaks.json` (break turn per seed and rollout), `monitor.jsonl` (one row per transcript and monitor view), `summary.json` and `evaluate.md` (from `probing_control.evaluate`), and the stage outputs. Transcripts (`.eval`) live under `logs/<same name>/`, older runs under `logs/_archive/<same name>/`, and are not committed; the `log` field in `monitor.jsonl` rows is the path at the time of the run.
 
 | Folder | What | Headline |
 | :-- | :-- | :-- |

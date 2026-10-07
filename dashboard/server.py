@@ -331,7 +331,7 @@ def bench() -> dict:
 def status() -> dict:
     runs = []
     for p in sorted(LOGS.rglob("*.eval")):
-        if ".buffer" in p.parts:
+        if ".buffer" in p.parts or "_archive" in p.parts:
             continue
         try:
             runs.append(read_run(p))

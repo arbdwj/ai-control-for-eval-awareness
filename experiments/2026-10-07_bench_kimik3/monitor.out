@@ -1,0 +1,3 @@
+
+=== 21:21:18 /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/.venv/bin/python -m probing_control.monitor --logs /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/logs/2026-10-07_bench_kimik3/base --views actions cot both --model openrouter/z-ai/glm-5.3 --out /Users/rambharadwaj/eval_awareness/eval-awareness-probing-control/experiments/2026-10-07_bench_kimik3/monitor.jsonl --max-connections 6 --redo-failed --provider Wafer
+3 monitor calls to make; 0 rows already present, skipped

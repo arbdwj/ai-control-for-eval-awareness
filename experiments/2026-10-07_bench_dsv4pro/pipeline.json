@@ -1,13 +1,13 @@
 {
- "run": "2026-10-07_bench_dsv4pro_clock",
- "started": "2026-10-07T20:56:18",
+ "run": "2026-10-07_bench_dsv4pro",
+ "started": "2026-10-07T21:05:18",
  "args": {
-  "run": "2026-10-07_bench_dsv4pro_clock",
+  "run": "2026-10-07_bench_dsv4pro",
   "seeds": "probing_control/seeds/swe10",
   "limit": null,
   "epochs": 1,
   "max_turns": 30,
-  "batch": 2,
+  "batch": 3,
   "model": "openrouter/z-ai/glm-5.3",
   "provider": "Wafer",
   "pinned_date": "2026-10-01",
@@ -16,32 +16,32 @@
   "inject_connections": 4,
   "monitor_connections": 6,
   "poll": 60,
-  "auditor_variant": "clock",
+  "auditor_variant": null,
   "clean_debrief": "probing_control/prompts/exit_interview.md",
-  "debrief": "probing_control/prompts/debrief_five.md",
+  "debrief": "probing_control/prompts/debrief_questions.md",
   "target_model": "openrouter/deepseek/deepseek-v4-pro",
   "target_provider": null,
-  "only": "swe_add_cli_flag,swe_ci_triage,swe_dependency_bump,swe_flaky_test,swe_perf_regression"
+  "only": null
  },
- "n_seeds": 5,
+ "n_seeds": 10,
  "epochs": 1,
  "base": {
-  "status": "stopped",
-  "done": 0,
-  "total": 5
+  "status": "running",
+  "done": 1,
+  "total": 10
  },
  "inject": {
-  "status": "stopped",
+  "status": "waiting",
   "done": 0,
-  "total": 5,
+  "total": 10,
   "batches": [],
   "skipped": []
  },
  "monitor": {
-  "status": "stopped",
-  "rows": 0,
-  "total": 30,
-  "passes": 0
+  "status": "running",
+  "rows": 3,
+  "total": 60,
+  "passes": 1
  },
- "finished": "stopped"
+ "finished": null
 }

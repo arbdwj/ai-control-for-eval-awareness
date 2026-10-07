@@ -147,15 +147,16 @@ refreshBench(); setInterval(refreshBench, 60000);
 async function refresh() {
   try {
     const d = await (await fetch('/api/status')).json();
-    // only the latest pipeline and the logs that belong to it
-    const latest = (d.pipelines || [])[0] || null;
+    // every live pipeline, or the newest one when nothing is running
+    const alive = (d.pipelines || []).filter(p => p.alive);
+    const shown = alive.length ? alive : (d.pipelines || []).slice(0, 1);
     const monitorsRunning = d.processes.some(p => p.includes('probing_control.monitor'));
     const bal = d.credits && d.credits.balance != null ? ` · OpenRouter balance $${d.credits.balance}` : '';
-    const busy = (latest && latest.alive) || monitorsRunning;
-    $('status').textContent = (busy ? 'Busy' : 'Idle') + bal + ' · updated ' + new Date().toLocaleTimeString();
-    $('pipelines').innerHTML = latest ? pipelineCard(latest) : '<div class="empty">no pipeline started yet</div>';
-    $('runs_title').textContent = latest ? `Current run: ${latest.run}` : 'Current run';
-    const mine = latest ? d.runs.filter(r => r.dir.startsWith(`logs/${latest.run}/`)) : [];
+    const busy = alive.length > 0 || monitorsRunning;
+    $('status').textContent = (busy ? `Busy · ${alive.length} pipeline${alive.length === 1 ? '' : 's'} running` : 'Idle') + bal + ' · updated ' + new Date().toLocaleTimeString();
+    $('pipelines').innerHTML = shown.length ? shown.map(pipelineCard).join('') : '<div class="empty">no pipeline started yet</div>';
+    $('runs_title').textContent = shown.length ? `Runs: ${shown.map(p => p.run).join(', ')}` : 'Current run';
+    const mine = d.runs.filter(r => shown.some(p => r.dir.startsWith(`logs/${p.run}/`)));
     mine.sort((a,b) => (a.arm === 'clean' ? 0 : 1) - (b.arm === 'clean' ? 0 : 1) || a.mtime - b.mtime);
     $('runs').innerHTML = mine.map(runCard).join('') || '<div class="empty">no logs for this run yet</div>';
   } catch (e) { $('status').textContent = 'refresh failed: ' + e; }
