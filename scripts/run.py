@@ -58,6 +58,10 @@ def run_eval(args, *, task_args: dict, log_dir: str, epochs: int, max_connection
 
 
 def seeds_arg(args) -> str | None:
+    seeds = getattr(args, "seeds", None)
+    if seeds and seeds != "all" and Path(seeds).exists():
+        # a seed directory or file: the task is loaded with its own directory as cwd
+        return str(Path(seeds).resolve())
     if getattr(args, "subset", None):
         ids = [l.strip() for l in Path(args.subset).read_text().splitlines() if l.strip()]
         return "id:" + ",".join(ids)

@@ -8,6 +8,7 @@ The report on the 2026-10-04 full run, in three formats built from the same cont
 | `report.docx` | Word, generated from the Markdown with the `docx` library |
 | `report.html` | Standalone page with interactive charts (hover, table views); also published as a private Claude artifact |
 | `petri_seams.md` | Every environment seam the targets reported, tagged with the Petri change it implies, with seed, turn and excerpt |
+| `probing_control_writeup.md` / `.docx` | The benchmark writeup (user's structure): ten SWE seeds, five probing questions with manifest ground truth, overseer protocol, first iteration plan |
 | `design_overseen_probing_benchmark.md` / `.docx` | Design for the covert-probing benchmark with an online overseer (one model as monitor and judge, several targets); figure is simulated data |
 | `figures/*.png` | matplotlib renders of the three charts, 200 dpi |
 
